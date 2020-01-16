@@ -1,0 +1,79 @@
+.PortfolioList {
+    position: absolute;
+    width: 900px;
+    display: inline-block;
+    margin-bottom: 200px;
+}
+
+/* .Project_Content {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 10px;
+} */
+
+.Project_Table {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: table;    
+    margin-bottom: 10px;
+    width: 100%;
+}
+.Project_Row {
+    display: table-row;
+}
+.Project_Cell {
+    display: table-cell;
+}
+.Project_Image {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(199, 199, 199);
+    vertical-align: top;
+    margin-right: 10px;
+    min-width: 35%px;
+}
+
+.Project_Desc {
+    vertical-align: top;
+    padding: 10px;
+    width: 65%;
+}
+
+.Project_Title {
+    font-size: 30px;
+    font-style: italic;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 10px;
+}
+
+.ButtonList{
+    padding: 20px;
+}
+
+.Button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.BuiltWith_Title{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Technology_Used {
+    display: inline;    
+    margin-right: 5px;    
+}
+
+.TechImage {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-right: 5px;
+}

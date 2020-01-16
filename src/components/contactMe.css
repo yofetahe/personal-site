@@ -1,0 +1,52 @@
+.contactMe_content {
+    position: absolute;
+    width: 550px;
+    display: inline-block;
+}
+
+.ContactMeMedia a {
+    margin-right: 10px;
+}
+
+.ContactMeForm {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+label {
+    font-style: italic;
+}
+
+input#name, input#email {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    line-height: 2;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+}
+
+input#button {
+    width: 20%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0px;
+    cursor: pointer;
+    color: rgb(68, 67, 67);
+}
+
+input#button :hover {
+    color: #fff;
+}
