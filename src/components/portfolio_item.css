@@ -1,0 +1,55 @@
+.Project_Table {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: table;    
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+.Project_Row {
+    display: table-row;
+}
+.Project_Cell {
+    display: table-cell;
+}
+.Project_Image {
+    margin-right: 10px;
+    min-width: 35%;
+}
+
+img#projectImage {
+    width: 420px;
+}
+
+.Project_Desc {
+    vertical-align: top;
+    padding: 30px 10px;
+    width: 65%;
+}
+
+.Project_Title {
+    font-size: 30px;
+    font-style: italic;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 10px;
+}
+
+.ButtonList{
+    padding: 20px;
+}
+
+
+.BuiltWith_Title{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}

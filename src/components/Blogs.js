@@ -4,7 +4,6 @@ import Blog from './Blog';
 
 import PageTitle from './PageTitle';
 
-import './index_page.css';
 import './blogs.css';
 
 const Blogs = () => {

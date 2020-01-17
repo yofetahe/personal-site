@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import PageTitle from './PageTitle';
 
-import './index_page.css';
 import './aboutMe.css';
 
 const AboutMe = () => {
@@ -10,7 +9,7 @@ const AboutMe = () => {
 
     return (
         <Fragment>
-            <div id="otherPageContent" className="HidenContent" style={{left: "100px"}}></div>
+            <div id="otherPageContent" className="HidenContent"></div>
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">About Me</div>
                 <PageTitle pageTitle=" WHO AM I? " />            

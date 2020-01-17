@@ -6,7 +6,6 @@ import gmail from '../images/email.png';
 import linkedIn from '../images/linkedIn.png';
 import github from '../images/github.png';
 
-import './index_page.css';
 import './contactMe.css'
 
 const ContactMe = () => {
@@ -27,7 +26,7 @@ const ContactMe = () => {
                         </a>                        
                     
                         <a href="https://github.com/yofetahe" target="_new">
-                            <img src={github} alt="github" style={{width: "52px"}} title="https://github.com/yofetahe" /> 
+                            <img src={github} alt="github" style={{width: "50px"}} title="https://github.com/yofetahe" /> 
                         </a>                        
                     </div>
                     <div className="ContactMeForm">

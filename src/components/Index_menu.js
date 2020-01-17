@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import './index_page.css'
+import './index_menu.css';
 import MenuIcon from '../images/menu.svg';
 import MenuClose from '../images/Menu_Close.png';
 
@@ -9,19 +9,38 @@ const Menu = () => {
 
     const history = useHistory();
 
+    const [currentPage, setCurrentPage] = useState("");
+
+    useEffect(() => {
+        setCurrentPage(history.location.pathname);
+    });
+
     const handleMouseOver = (menu) => {
-        document.getElementById(menu).className = "MenuMouseHover " + menu
+        document.getElementById(menu).className = "MenuMouseHover " + menu;
     }
     const handleMouseOut = (menu) => {
-        document.getElementById(menu).className = "Menu " + menu;
+        var m = menu === "Home" ? "/" : "/"+menu;
+        document.getElementById(menu).className = "Menu " + menu  + (currentPage === m ? " ActiveMenu" : "");
     }    
 
     const handleMenuOnClick = (menu) => {
-        document.getElementById("otherPageContent").innerHTML = menu;
+
+        var path = history.location.pathname;
+        var new_path = (menu === "Home") ? "/" : "/"+menu;
+        if(new_path === path) return;
+
+        document.getElementById("otherPageContent").innerHTML = menu;        
         document.getElementById("otherPageContent").className = "DisplayedContent";
         document.getElementById("homePageContent").className = "HidenContent";
     
         setTimeout(() => handlePageNavigation(menu), 1000)
+    }
+
+    const handlePageNavigation = (menu) => {
+        if(menu === "Home") 
+            history.push("/")
+        else    
+            history.push("/"+menu);
     }
 
     const handleViewHideMenuOnClick = (value) => {
@@ -35,15 +54,7 @@ const Menu = () => {
         }
     }
     
-    const handlePageNavigation = (menu) => {      
-        if(menu === "Home") 
-            history.push("/")
-        else    
-            history.push("/"+menu);
-    }
-
-
-    return (
+    return (        
         <Fragment>
             <div id="ViewMenuIcon" style={{display: "none"}}>
                 <div className="HideViewMenu"
@@ -56,43 +67,43 @@ const Menu = () => {
                     onClick={() => handleViewHideMenuOnClick("HIDE")}> 
                     <img src={MenuClose} alt="MenuIcon" style={{width: "30px"}} /> 
                 </div>
-                <div id="Blogs" className="Menu Blogs" 
+                <div id="Blogs" className={"Menu Blogs " + (currentPage === "/Blogs" ? "ActiveMenu" : "")} 
                     onMouseOver={()=> handleMouseOver("Blogs")} 
                     onMouseOut={() => handleMouseOut("Blogs")}
                     onClick={() => handleMenuOnClick("Blogs")}> 
                     BLOGS 
                 </div>
-                <div id="Resume" className="Menu Resume"
+                <div id="Resume" className={"Menu Resume " + (currentPage === "/Resume" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("Resume")} 
                     onMouseOut={() => handleMouseOut("Resume")}
                     onClick={() => handleMenuOnClick("Resume")}> 
                     RESUME
                 </div>
-                <div id="ContactMe" className="Menu ContactMe"
+                <div id="ContactMe" className={"Menu ContactMe " + (currentPage === "/ContactMe" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("ContactMe")} 
                     onMouseOut={() => handleMouseOut("ContactMe")}
                     onClick={() => handleMenuOnClick("ContactMe")}> 
                     CONTACT ME 
                 </div>
-                <div id="Technologies" className="Menu Technologies"
+                <div id="Technologies" className={"Menu Technologies " + (currentPage === "/Technologies" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("Technologies")} 
                     onMouseOut={() => handleMouseOut("Technologies")}
                     onClick={() => handleMenuOnClick("Technologies")}> 
                     TECHNOLOGIES 
                 </div>
-                <div id="Portfolio" className="Menu Portfolio"
+                <div id="Portfolio" className={"Menu Portfolio " + (currentPage === "/Portfolio" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("Portfolio")} 
                     onMouseOut={() => handleMouseOut("Portfolio")}
                     onClick={() => handleMenuOnClick("Portfolio")}> 
                     PORTFOLIO 
                 </div>
-                <div id="AboutMe" className="Menu AboutMe"
+                <div id="AboutMe" className={"Menu AboutMe " + (currentPage === "/AboutMe" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("AboutMe")} 
                     onMouseOut={() => handleMouseOut("AboutMe")}
                     onClick={() => handleMenuOnClick("AboutMe")}> 
                     ABOUT ME 
                 </div>
-                <div id="Home" className="Menu Home"
+                <div id="Home" className={"Menu Home " + (currentPage === "/" ? "ActiveMenu" : "")}
                     onMouseOver={()=> handleMouseOver("Home")} 
                     onMouseOut={() => handleMouseOut("Home")}
                     onClick={() => handleMenuOnClick("Home")}> 

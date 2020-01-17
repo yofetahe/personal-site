@@ -1,0 +1,123 @@
+.MenuContent {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+}
+
+.HideViewMenu {
+    width: 100px;
+    margin-left: auto;
+    margin-right: 0;
+    -webkit-box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.58); 
+    box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.1);    
+    color: orange;
+    background-color: gray;
+    text-align: center;
+    border-top-left-radius: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.Menu {
+    border-top: solid 1px rgba(201, 201, 201, 0.87);
+    border-left: solid 1px rgba(201, 201, 201, 0.87);
+    border-top-left-radius: 10px;
+    height: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    -webkit-box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.58); 
+    box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.1);    
+    color: orange;
+    background-color: rgba(97, 97, 97, 0.9);
+    text-shadow: 1px 1px #000000;
+}
+
+.MenuMouseHover {
+    border-top: solid 1px rgba(201, 201, 201, 0.87);
+    border-left: solid 1px rgba(201, 201, 201, 0.87);
+    border-top-left-radius: 10px;
+    height: 40px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    -webkit-box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.58); 
+    box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.2);    
+    background-color: rgba(128, 128, 128, 0.9);;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.MenuSelected {
+    height: 40px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    -webkit-box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.58); 
+    box-shadow: -5px -5px 10px 3px rgba(97,97,97,0.58);    
+    color: #fff;
+    background-color: rgba(128, 128, 128, 0.9);;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.MenuClicked {
+    height: 100vh;
+    width: 100vw;
+}
+
+.HidenContent {
+    display: none;
+}
+
+.DisplayedContent {
+    display: block;
+    font-size: 150px;
+    color: rgba(201, 201, 201, 0.3);
+    top: -50px;    
+}
+
+.ShowMenu {
+    width: 100px;
+}
+
+.ActiveMenu {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.Home {
+    width: 800px;
+}
+
+.AboutMe {
+    width: 700px;
+}
+
+.Portfolio {
+    width: 600px;
+}
+
+.Technologies {
+    width: 500px;
+}
+
+.ContactMe {
+    width: 400px;
+}
+
+.Resume {
+    width: 300px;
+}
+
+.Blogs {
+    width: 200px;
+}

@@ -1,14 +1,15 @@
 .App {  
-  color: #fff;
+  color: rgb(211, 211, 211);
 }
 
 body {
-  /* background-image: url(./images/bg_2.jpg); */
+  background-image: url(./images/bg_3.png);
   /* background-position: center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover;
-  background-attachment:fixed;*/
-  background-color: gray;    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+  /* background-color: gray; */
+  color: rgb(211, 211, 211);
 }
 
 .App-logo {

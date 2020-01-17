@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 
 import PageTitle from './PageTitle';
 
-import './index_page.css';
 import './resume.css';
 
 import PDF from '../images/pdf.png';

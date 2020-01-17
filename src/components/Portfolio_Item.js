@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import PortfolioTechUsed from './Portfolio_Tech_Used';
 
-import './portfolio.css'
+import './portfolio_item.css'
 
 const PortfolioItem = (props) => {
-    return (
-        <div className="Project_Table">
+
+    const [image, setImage] = useState("");
+
+    const loadImage = imageName => {
+        console.log(imageName);
+        import(`../images/Projects/${imageName}.png`).then(image => {
+            console.log(image.default);
+            setImage(image.default);
+        })
+    }
+
+    useEffect(()=> {
+        loadImage(props.project.image);
+    },[]);
+
+    return ( 
+        <div className="Project_Table">            
             <div className="Project_Row">
                 <div className="Project_Image Project_Cell">
-                    <img src={props.project.image} alt={props.project.image} />
+                    <img id="projectImage" src={image} alt="image" />
                 </div>
                 <div className="Project_Desc Project_Cell">
                     <div className="Project_Title">{props.project.title}</div>

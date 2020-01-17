@@ -1,7 +1,13 @@
 import React from 'react';
 
+import './footer.css';
+
 const Footer = () => {
-    return <div style={{padding: "0px 0px 20px 20px", color: "#fff"}}>@2020</div>
+    return (
+        <div className="FooterContent">
+            &copy; {(new Date().getFullYear())} Yofetahe H. <br/> All rights reserved.
+        </div>
+    );
 }
 
 export default Footer;

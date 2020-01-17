@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import './components/index_page.css';
+import './components/index.css';
+import './components/footer.css';
 
 import Home from './components/index';
 import AboutMe from './components/AboutMe';

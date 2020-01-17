@@ -8,30 +8,4 @@
     margin-bottom: 200px;
 }
 
-.Blog {
-    display: flex;
-}
 
-.Blog_Content {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    /* background-color: rgba(255, 255, 255, 0.2); */
-    margin-bottom: 10px;
-    display: flex;
-}
-
-.BlogImage {
-    display: inline;
-    width: 15%;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-right: 10px;
-}
-.BlogContent #title {
-    font-size: 25px;
-    font-style: italic;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-}
-
-a {
-    text-decoration: none;
-}
