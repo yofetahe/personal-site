@@ -1,22 +1,68 @@
-.DisplayPageTitle{
-    background-color: rgba(128, 128, 128, 0.2);
-    display: inline-block;
-    height: 300px;
-    width: 100px;
-    margin-right: 10px;
-    padding-top: 40px;    
+/* smaller devices */
+@media (max-width: 767px) { 
+
+    .DisplayPageTitle{
+        border-top: solid 1px gray;
+        margin-bottom: 50px;  
+    }
+
+    .Rotate {  
+        background-color: gray;
+        float: right;
+        padding: 5px 40px;
+    }
 }
 
-.Rotate {  
-    /* transform:  translateX(0%) translateY(0%) rotate(-90deg);     */
-    /* -webkit-transform: rotate(-90deg); 
-    -moz-transform: rotate(-90deg); */
-    /* width: 400px;  */
-    transform: rotate(-90deg);
-    transform-origin: top top -0;
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    
+    .DisplayPageTitle{
+        background-color: rgba(128, 128, 128, 0.2);
+        display: inline-block;
+        height: 300px;
+        width: 100px;
+        margin-right: 10px;
+        padding-top: 40px;    
+    }
+
+    .Rotate {  
+        /* transform:  translateX(0%) translateY(0%) rotate(-90deg);     */
+        /* -webkit-transform: rotate(-90deg); 
+        -moz-transform: rotate(-90deg); */
+        /* width: 400px;  */
+        transform: rotate(-90deg);
+        transform-origin: top top -0;
+    }
+
+    .RotateTitle {
+        font-size: 16px;
+        color: rgba(255, 165, 0, 0.3);
+    }
 }
 
-.RotateTitle {
-    font-size: 16px;
-    color: rgba(255, 165, 0, 0.3);
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+
+    .DisplayPageTitle{
+        background-color: rgba(128, 128, 128, 0.2);
+        display: inline-block;
+        height: 300px;
+        width: 100px;
+        margin-right: 10px;
+        padding-top: 40px;    
+    }
+
+    .Rotate {  
+        /* transform:  translateX(0%) translateY(0%) rotate(-90deg);     */
+        /* -webkit-transform: rotate(-90deg); 
+        -moz-transform: rotate(-90deg); */
+        /* width: 400px;  */
+        transform: rotate(-90deg);
+        transform-origin: top top -0;
+    }
+
+    .RotateTitle {
+        font-size: 16px;
+        color: rgba(255, 165, 0, 0.3);
+    }
 }

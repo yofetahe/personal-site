@@ -9,7 +9,7 @@ class Home extends React.Component {
     render(){
         return (
             <Fragment>
-                <div id="otherPageContent" className="HidenContent" data-text="ANIMATION TEST">ANIMATION TEST</div>
+                <div id="otherPageContent" className="HidenContent" data-text="ANIMATION TEST"></div>
                 <div id="homePageContent" className="PageContent">
                     <div className="BackgroundText">Home</div>
                     <div className="HomePic_Container">

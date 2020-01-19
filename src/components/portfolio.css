@@ -1,9 +1,37 @@
-.PortfolioList {
-    position: absolute;
-    width: 70%;
-    display: inline-block;
-    margin-bottom: 200px;
+/* smaller devices */
+@media (max-width: 767px) { 
+
+    .PortfolioList {
+        /* position: absolute; */
+        width: 100%;
+        display: block;
+        margin-bottom: 200px;
+    }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .PortfolioList {
+        position: absolute;
+        width: 80%;
+        display: inline-block;
+        margin-bottom: 200px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+    .PortfolioList {
+        position: absolute;
+        width: 70%;
+        display: inline-block;
+        margin-bottom: 200px;
+    }
+}
+
+
 
 /* .Project_Content {
     border: 1px solid rgba(255, 255, 255, 0.5);

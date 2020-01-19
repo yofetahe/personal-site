@@ -4,60 +4,162 @@
     width: 100%; 
 }
 
-/* needs adjustment */
-.BackgroundText {
-    font-size: 150px;
-    text-shadow: 1px 1px #616161;
-    color: rgb(24, 29, 34);
+/* smaller devices */
+@media (max-width: 767px) { 
+    .BackgroundText {
+        font-size: 50px;
+        text-shadow: 1px 1px #616161;
+        color: rgb(24, 29, 34);
+    }
+
+    .HomePic_Container {
+        display: block;
+        background-color: gray;
+        width: 100%;
+        padding: 10px 0px;
+        margin-bottom: 10px;
+    }
+
+    img#home_pic {
+        width: 100%;
+    }
+
+    .Introduction {
+        position: absolute;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+
+    h3.name {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 39px;
+        letter-spacing: 0px;
+        word-spacing: 1.6px;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+    h5 {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 15px;
+        line-height: 2;
+    }
 }
 
-.HomePic_Container {
-    display: inline-block;
-    background-color: gray;
-    height: 385px;
-    width: 490px;
-    margin-right: 50px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .BackgroundText {
+        font-size: 150px;
+        text-shadow: 1px 1px #616161;
+        color: rgb(24, 29, 34);
+    }
+
+    .HomePic_Container {
+        display: inline-block;
+        background-color: gray;
+        height: 385px;
+        width: 490px;
+        margin-right: 50px;
+    }
+
+    img#home_pic {
+        width: 500px;
+        padding-top: 25px;
+    }
+
+    .Introduction {
+        position: absolute;
+        width: 330px;
+        display: inline-block;
+        padding-top: 20px;
+    }
+
+    h3.name {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 39px;
+        letter-spacing: 0px;
+        word-spacing: 1.6px;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+    h5 {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 15px;
+        line-height: 2;
+    }
 }
 
-img#home_pic {
-    width: 500px;
-    padding-top: 25px;
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+    
+    .BackgroundText {
+        font-size: 150px;
+        text-shadow: 1px 1px #616161;
+        color: rgb(24, 29, 34);
+    }
+
+    .HomePic_Container {
+        display: inline-block;
+        background-color: gray;
+        height: 385px;
+        width: 490px;
+        margin-right: 50px;
+    }
+
+    img#home_pic {
+        width: 500px;
+        padding-top: 25px;
+    }
+
+    .Introduction {
+        position: absolute;
+        width: 550px;
+        display: inline-block;
+        padding-top: 20px;
+    }
+
+    h3.name {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        font-size: 39px;
+        letter-spacing: 0px;
+        word-spacing: 1.6px;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+    }
+
+    h5 {
+        font-family: "Lucida Console", Monaco, monospace;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: normal;
+        font-variant: normal;
+        text-transform: none;
+        font-size: 15px;
+        line-height: 2;
+    }
 }
 
-.Introduction {
-    position: absolute;
-    width: 550px;
-    display: inline-block;
-    padding-top: 20px;
-}
 
-h3.name {
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    font-size: 39px;
-    letter-spacing: 0px;
-    word-spacing: 1.6px;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: italic;
-    font-variant: normal;
-    text-transform: none;
-}
-
-
-
-h5 {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    font-size: 15px;
-    line-height: 2;
-}
-
-/* span#initial {
-    font-size: 40px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    line-height: 0;
-} */

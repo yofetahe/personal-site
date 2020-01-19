@@ -1,22 +1,71 @@
+/* smaller devices */
+@media (max-width: 767px) { 
 
-.aboutme_content {
-    position: absolute;
-    width: 550px;
-    display: inline-block;
-    line-height: 2;
-    font-size: 20px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    letter-spacing: 0px;
-    word-spacing: 1.6px;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: italic;
-    font-variant: normal;
-    text-transform: none;
-    text-align: justify;
+    .aboutme_content {
+        line-height: 2;
+        font-size: 18px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        letter-spacing: 0px;
+        font-style: italic;
+        word-spacing: 1.6px;
+        text-align: justify;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+    .initialLetter{
+        font-size: 50px;
+        line-height: 1;
+    }
 }
 
-.initialLetter{
-    font-size: 50px;
-    line-height: 1;
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    
+    .aboutme_content {
+        position: absolute;
+        width: 550px;
+        display: inline-block;
+        line-height: 2;
+        font-size: 20px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        letter-spacing: 0px;
+        word-spacing: 1.6px;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+        text-align: justify;
+    }
+
+    .initialLetter{
+        font-size: 50px;
+        line-height: 1;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+    .aboutme_content {
+        position: absolute;
+        width: 550px;
+        display: inline-block;
+        line-height: 2;
+        font-size: 20px;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        letter-spacing: 0px;
+        word-spacing: 1.6px;
+        font-weight: normal;
+        text-decoration: none;
+        font-style: italic;
+        font-variant: normal;
+        text-transform: none;
+        text-align: justify;
+    }
+
+    .initialLetter{
+        font-size: 50px;
+        line-height: 1;
+    }
 }

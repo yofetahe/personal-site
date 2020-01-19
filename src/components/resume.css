@@ -1,7 +1,74 @@
-.resume_content {
-    position: absolute;
-    width: 70%;
-    display: inline-block;
+/* smaller devices */
+@media (max-width: 767px) { 
+
+    .resume_content {
+        position: absolute;
+        width: 100%;
+        display: block;
+        padding: 10px;
+    }
+    
+    .ResumeContent {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 20px;
+        width: 100%;
+    }
+
+    .ResumeDownload {
+        padding-left: 20px;
+    }
+
+    .ResumeDownload a {
+        margin-right: 10px;
+    }
+    
+    .ResumeContent {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 200px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .resume_content {
+        position: absolute;
+        width: 70%;
+        display: inline;
+    }
+
+    .ResumeDownload a {
+        margin-right: 10px;
+    }
+    
+    .ResumeContent {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 200px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+
+    .resume_content {
+        position: absolute;
+        width: 70%;
+        display: inline;
+    }
+
+    .ResumeDownload a {
+        margin-right: 10px;
+    }
+    
+    .ResumeContent {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 20px;
+        margin-top: 20px;
+        margin-bottom: 200px;
+    }
 }
 
 .ResumeDownload a {

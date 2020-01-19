@@ -44,7 +44,7 @@ const ContactMe = () => {
                             <div>
                                 <label>Message</label>
                                 <br/>
-                                <textarea id="message" rows="5" cols="75"></textarea>
+                                <textarea id="message" rows="5"></textarea>
                             </div>
                             <input id="button" type="Submit" value="SUBMIT"  />
                         </form>

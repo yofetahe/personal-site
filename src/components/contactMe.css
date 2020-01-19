@@ -1,18 +1,64 @@
-.contactMe_content {
-    position: absolute;
-    width: 550px;
-    display: inline-block;
+/* smaller devices */
+@media (max-width: 767px) {
+    .contactMe_content {
+        position: absolute;
+        width: 100%;
+        display: block;
+    }
+
+    .ContactMeMedia a {
+        padding-left: 20px;
+    }
+    
+    .ContactMeForm {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 20px;
+    }
 }
 
-.ContactMeMedia a {
-    margin-right: 10px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .contactMe_content {
+        position: absolute;
+        width: 550px;
+        display: inline-block;
+    }
+
+    .ContactMeMedia a {
+        margin-right: 10px;
+    }
+    
+    .ContactMeForm {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 20px;
+        margin-top: 20px;
+    }
 }
 
-.ContactMeForm {
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    padding-top: 20px;
-    margin-top: 20px;
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+
+    .contactMe_content {
+        position: absolute;
+        width: 550px;
+        display: inline-block;
+    }
+
+    .ContactMeMedia a {
+        margin-right: 10px;
+    }
+    
+    .ContactMeForm {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    
 }
+
+
+
 
 label {
     font-style: italic;
@@ -35,6 +81,10 @@ textarea {
     border-right: 0px;
     border-bottom: 2px solid rgb(212, 212, 212);
     margin-bottom: 10px;
+}
+
+textarea#message {
+    width: 100%;
 }
 
 input#button {

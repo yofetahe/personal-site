@@ -15,7 +15,7 @@ import Blogs from './components/Blogs';
 import PageNotFound from './components/PageNotFound';
 
 import Footer from './components/Footer';
-import Menu from './components/Index_menu';
+import Menu from './components/Menu';
 
 
 function App() {

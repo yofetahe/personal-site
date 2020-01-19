@@ -1,7 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import './index_menu.css';
+import './menu.css';
+
 import MenuIcon from '../images/menu.svg';
 import MenuClose from '../images/Menu_Close.png';
 
@@ -10,9 +11,11 @@ const Menu = () => {
     const history = useHistory();
 
     const [currentPage, setCurrentPage] = useState("");
+    const [size, setSize] = useState(0);
 
     useEffect(() => {
         setCurrentPage(history.location.pathname);
+        setSize(window.innerWidth);
     });
 
     const handleMouseOver = (menu) => {
@@ -26,12 +29,15 @@ const Menu = () => {
     const handleMenuOnClick = (menu) => {
 
         var path = history.location.pathname;
-        var new_path = (menu === "Home") ? "/" : "/"+menu;
+        var new_path = (menu === "Home") ? "/" : "/"+menu;        
         if(new_path === path) return;
 
         document.getElementById("otherPageContent").innerHTML = menu;        
         document.getElementById("otherPageContent").className = "DisplayedContent";
         document.getElementById("homePageContent").className = "HidenContent";
+
+        document.getElementById("ViewMenuIcon").className = "ShowForSmallDevice";
+        document.getElementById("MenuList").className = "HideForSmallDevice";
     
         setTimeout(() => handlePageNavigation(menu), 1000)
     }
@@ -44,28 +50,40 @@ const Menu = () => {
     }
 
     const handleViewHideMenuOnClick = (value) => {
+        
         if(value === "VIEW") {
-            document.getElementById("ViewMenuIcon").style.display = "none";
-            document.getElementById("MenuList").style.display = "block";
+            if(size > 1200) {
+                document.getElementById("ViewMenuIcon").style.display = "none";
+                document.getElementById("MenuList").style.display = "block";
+            } else {
+                document.getElementById("ViewMenuIcon").className = "HideForSmallDevice";
+                document.getElementById("MenuList").className = "ShowForSmallDevice";
+            }
         }
+        
         if(value === "HIDE") {
-            document.getElementById("ViewMenuIcon").style.display = "block";
-            document.getElementById("MenuList").style.display = "none";
+            if(size > 1200) {
+                document.getElementById("ViewMenuIcon").style.display = "block";
+                document.getElementById("MenuList").style.display = "none";
+            } else {
+                document.getElementById("ViewMenuIcon").className = "ShowForSmallDevice";
+                document.getElementById("MenuList").className = "HideForSmallDevice";
+            }            
         }
     }
     
     return (        
         <Fragment>
-            <div id="ViewMenuIcon" style={{display: "none"}}>
+            <div id="ViewMenuIcon" className={size < 1200 ? "ShowForSmallDevice" : ""}  >
                 <div className="HideViewMenu"
                     onClick={() => handleViewHideMenuOnClick("VIEW")}> 
                     <img src={MenuIcon} alt="MenuIcon" style={{width: "30px"}} /> 
                 </div>
             </div>
-            <div id="MenuList">
+            <div id="MenuList" className={size < 1200 ? "HideForSmallDevice" : ""}>
                 <div id="CloseButton" className="HideViewMenu"
                     onClick={() => handleViewHideMenuOnClick("HIDE")}> 
-                    <img src={MenuClose} alt="MenuIcon" style={{width: "30px"}} /> 
+                    <img src={MenuClose} alt="MenuIcon" style={{width: "30px"}} />
                 </div>
                 <div id="Blogs" className={"Menu Blogs " + (currentPage === "/Blogs" ? "ActiveMenu" : "")} 
                     onMouseOver={()=> handleMouseOver("Blogs")} 
@@ -109,6 +127,9 @@ const Menu = () => {
                     onClick={() => handleMenuOnClick("Home")}> 
                     HOME 
                 </div>
+            </div>
+            <div className="MenuFooterContent">
+                &copy; {(new Date().getFullYear())} Yofetahe H. All rights reserved.
             </div>
         </Fragment>
     );

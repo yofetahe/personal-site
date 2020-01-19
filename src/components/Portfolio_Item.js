@@ -28,13 +28,13 @@ const PortfolioItem = (props) => {
                 </div>
                 <div className="Project_Desc Project_Cell">
                     <div className="Project_Title">{props.project.title}</div>
-                    <div>{props.project.project_description}</div>
+                    <div className="Project_Description">{props.project.project_description}</div>
                     <div className="ButtonList">
                         <a href={props.project.web_link} className="Button">View Site</a>
                         <a href={props.project.source_code_link} className="Button">View Source Code</a>
                     </div>
                     <span className="BuiltWith_Title">Built with</span>
-                    <div style={{display: "flex"}}>                        
+                    <div class="TechUsedList">
                         {props.project.built_with.map(tech => {
                             return <PortfolioTechUsed tech={tech} />
                         })}

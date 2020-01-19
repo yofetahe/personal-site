@@ -26,7 +26,7 @@ const Resume = () => {
                             <img src={PDF} alt="linkedIn" style={{width: "40px"}} /> 
                         </a>            
                     </div>
-                    <div className="ResumeContent">
+                     <div className="ResumeContent"> 
                         <h4>Professional Experiance</h4>
                         <div>
                             <h5>Software Engineer, June 2019 till present <br/> HCL Technologies, WA, USA</h5>
@@ -83,7 +83,7 @@ const Resume = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </Fragment>
     );

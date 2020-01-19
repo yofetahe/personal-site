@@ -1,11 +1,30 @@
-/* *{
-    outline: 1px dashed red;
-} */
-.Blogs_List {
-    position: absolute;
-    width: 60%;
-    display: inline-block;
-    margin-bottom: 200px;
+/* smaller devices */
+@media (max-width: 767px) { 
+    .Blogs_List {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 100px;
+    }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .Blogs_List {
+        position: absolute;
+        width: 80%;
+        display: inline-block;
+        margin-bottom: 200px;
+    }
+}
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+
+    .Blogs_List {
+        position: absolute;
+        width: 60%;
+        display: inline-block;
+        margin-bottom: 200px;
+    }
+}

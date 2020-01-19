@@ -1,18 +1,59 @@
-.Blog_Content {
-    width: 100%;
-    background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
-    margin-bottom: 10px;
-    display: flex;
-    padding: 10px;
+/* smaller devices */
+@media (max-width: 767px) { 
+    .Blog_Content {
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
+        margin-bottom: 10px;
+    }
+
+    .BlogImage {
+        display: none;        
+    }
+
+    .BlogContent {
+        padding: 0px 10px;
+    }
 }
 
-.BlogImage {
-    display: inline;
-    width: 17%;
-    background-color: rgba(255, 255, 255, 0.4);
-    margin-right: 10px;
-    border-radius: 50%;
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .Blog_Content {
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
+        margin-bottom: 10px;
+        display: flex;
+        padding: 10px;
+    }
+
+    .BlogImage {
+        display: inline;
+        width: 17%;
+        background-color: rgba(255, 255, 255, 0.4);
+        margin-right: 10px;
+        border-radius: 50%;
+    }
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+    .Blog_Content {
+        width: 100%;
+        background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
+        margin-bottom: 10px;
+        display: flex;
+        padding: 10px;
+    }
+
+    .BlogImage {
+        display: inline;
+        width: 17%;
+        background-color: rgba(255, 255, 255, 0.4);
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    
+}
+
 .BlogContent #title {
     font-size: 25px;
     font-style: italic;

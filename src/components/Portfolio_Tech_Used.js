@@ -16,7 +16,11 @@ const PortfolioTechUsed = (props) => {
         loadImage(props.tech);
     },[]);
 
-    return <img src={image} alt="tech" className="TechImage" />;
+    return (
+        <div className="TechImage">
+            <img src={image} alt="tech" className="T_Image"/>
+        </div>
+    );
 }
 
 export default PortfolioTechUsed;
