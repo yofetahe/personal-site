@@ -27,19 +27,19 @@ const Menu = () => {
     }    
 
     const handleMenuOnClick = (menu) => {
-
+        console.log(menu);
         var path = history.location.pathname;
         var new_path = (menu === "Home") ? "/" : "/"+menu;        
         if(new_path === path) return;
-
-        document.getElementById("otherPageContent").innerHTML = menu;        
+        console.log(new_path);
+        // document.getElementById("otherPageContent").innerHTML = menu;        
         document.getElementById("otherPageContent").className = "DisplayedContent";
         document.getElementById("homePageContent").className = "HidenContent";
 
         document.getElementById("ViewMenuIcon").className = "ShowForSmallDevice";
         document.getElementById("MenuList").className = "HideForSmallDevice";
     
-        setTimeout(() => handlePageNavigation(menu), 1000)
+        setTimeout(() => handlePageNavigation(menu), 1200)
     }
 
     const handlePageNavigation = (menu) => {

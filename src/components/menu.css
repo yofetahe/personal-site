@@ -1,14 +1,12 @@
 
 /* smaller devices */
 @media (max-width: 767px) { 
-    /* *{
-        outline: solid 1px green;
-    } */
 
     .MenuFooterContent {
         background-color: rgb(78, 78, 78);
         padding: 10px 0px;
         text-align: center;
+        font-size: 11px;
     }
 
     .MenuContent {

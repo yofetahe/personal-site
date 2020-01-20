@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 
 import PortfolioItem from './Portfolio_Item';
-
+import RedirectPage from './RedirectPage';
 import PageTitle from './PageTitle';
 
 import './portfolio.css';
@@ -53,7 +53,7 @@ const Portfolio = () => {
 
     return (
         <Fragment>
-            <div id="otherPageContent" className="HidenContent"></div>
+            <RedirectPage />
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">Portfolio</div>
                 <PageTitle pageTitle=" WHAT DID I DO? " />

@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+import RedirectPage from './RedirectPage';
 import PageTitle from './PageTitle';
 
 import './aboutMe.css';
@@ -8,8 +9,8 @@ const AboutMe = () => {
     
 
     return (
-        <Fragment>
-            <div id="otherPageContent" className="HidenContent"></div>
+        <Fragment>            
+            <RedirectPage />
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">About Me</div>
                 <PageTitle pageTitle=" WHO AM I? " />            

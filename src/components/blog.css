@@ -60,6 +60,7 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-a {
+#readmore {
     text-decoration: none;
+    color: rgb(93, 79, 150);
 }

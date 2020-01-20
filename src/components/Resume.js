@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import PageTitle from './PageTitle';
+import RedirectPage from './RedirectPage';
+import ResumeExperience from './ResumeExperience';
 
 import './resume.css';
 
@@ -10,9 +12,56 @@ import Resume_PDF from '../document/Yofetahe_Habtu_1_3_2020.pdf';
 import Resume_WORD from '../document/Yofetahe_Habtu_1_3_2020.docx';
 
 const Resume = () => {
+
+    const [experiance, setExperiance] = useState([
+        { 
+            id: "1",
+            position: "Software Engineer", 
+            startDate: "June 2019", 
+            endDate: "present", 
+            company: "HCL Technologies", 
+            country: "WA, USA",
+            responsibilities: [
+                "Attend intensive training on front end (JavaScript, React, Angular and CSS) and Java technologies (Java and Node.js) and also Cloud Infrastructure (Cloud Foundry, Azure and AWS)",
+                "Develop sample project (Commercial site using React, Java and MySQL) at the end of the training and deploy the app on cloud foundry.",
+                "Shadow senior software engineers on the front-end features and back end functionality development using React and Java"
+            ]
+        },
+        { 
+            id: "2",
+            position: "Software Engineer", 
+            startDate: "March 2015", 
+            endDate: "April 2018", 
+            company: "YamGet IT Solutions PLC", 
+            country: "Addis Ababa, Ethiopia",
+            responsibilities: [
+                "Develop the common user authorization and authentication app for all company’s applications",
+                "Work on the back-end and front-end development, test and maintain applications.",
+                "Facilitated customization of best practices to adopt emerging standards for application development architecture and tools.",
+                "Participated in project presentations to end users and managers to make the software solutions easy-to-understand.",
+                "Help on major deals via generating well formatted presentation document of the applications.",
+                "Research, design, develop and implement scalable applications for clients"
+            ]
+        },
+        { 
+            id: "3",
+            position: "Software Engineer", 
+            startDate: "April 2014", 
+            endDate: "March 2015", 
+            company: "Apposit LLC", 
+            country: "Addis Ababa, Ethiopia",
+            responsibilities: [
+                "Fix bugs from the existing system and develop new features as per end users request",
+                "Work on the back-end development of application enhancement to a new version",
+                "Develop new sub project based on requirement document when a new firm join the platform."
+            ]
+        }
+    ]);
+
     return (
         <Fragment>
-            <div id="otherPageContent" className="HidenContent"></div>
+            {/* <div id="otherPageContent" className="HidenContent"></div> */}
+            <RedirectPage />
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">Resume</div>
                 <PageTitle pageTitle=" DO YOU HAVE OPPORTUNITIES FOR ME? " />
@@ -28,60 +77,9 @@ const Resume = () => {
                     </div>
                      <div className="ResumeContent"> 
                         <h4>Professional Experiance</h4>
-                        <div>
-                            <h5>Software Engineer, June 2019 till present <br/> HCL Technologies, WA, USA</h5>
-                            <ul>
-                                <li>
-                                    Attend intensive training on front end (JavaScript, React, Angular and CSS) and 
-                                    Java technologies (Java and Node.js) and also Cloud Infrastructure (Cloud Foundry, Azure and AWS)
-                                </li>
-                                <li>
-                                    Develop sample project (Commercial site using React, Java and MySQL) at the end of the training 
-                                    and deploy the app on cloud foundry.
-                                </li>
-                                <li>
-                                    Shadow senior software engineers on the front-end features and back end functionality development
-                                    using React and Java
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5>Software Engineer, March 2015 to April 2018 <br/> YamGet IT Solutions Plc - Addis Ababa, ETH</h5>
-                            <ul>
-                                <li>
-                                Develop the common user authorization and authentication app for all company’s applications
-                                </li>
-                                <li>
-                                Work on the back-end and front-end development, test and maintain applications.
-                                </li>
-                                <li>
-                                Facilitated customization of best practices to adopt emerging standards for application development architecture and tools.
-                                </li>
-                                <li>
-                                Participated in project presentations to end users and managers to make the software solutions easy-to-understand.
-                                </li>
-                                <li>
-                                Help on major deals via generating well formatted presentation document of the applications.
-                                </li>
-                                <li>
-                                Research, design, develop and implement scalable applications for clients
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h5>Software Engineer, April 2014 – March 2015 <br/> Apposit LLC - Addis Ababa, ETH</h5>
-                            <ul>
-                                <li>
-                                Fix bugs from the existing system and develop new features as per end users request
-                                </li>
-                                <li>
-                                Work on the back-end development of application enhancement to a new version
-                                </li>
-                                <li>
-                                Develop new sub project based on requirement document when a new firm join the platform.
-                                </li>                                
-                            </ul>
-                        </div>
+                        {experiance.map(exp => {
+                            return <ResumeExperience key={exp.id} experience={exp} />
+                        })}
                     </div>
                 </div> 
             </div>

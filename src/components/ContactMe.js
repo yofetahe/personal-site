@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import PageTitle from './PageTitle';
+import RedirectPage from './RedirectPage';
 
 import gmail from '../images/email.png';
 import linkedIn from '../images/linkedIn.png';
@@ -11,7 +12,7 @@ import './contactMe.css'
 const ContactMe = () => {
     return (
         <Fragment>
-            <div id="otherPageContent" className="HidenContent"></div>
+            <RedirectPage />
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">Contact Me</div>
                 <PageTitle pageTitle=" WHAT DO YOU HAVE IN MIND? " />

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 
 import PageTitle from './PageTitle';
+import RedirectPage from './RedirectPage';
 
 import HTML from '../images/TechIcons/HTML.png';
 import CSS from '../images/TechIcons/CSS.png';
@@ -41,7 +42,7 @@ import './technologies.css';
 const Technologies = () => {
     return (
         <Fragment>
-            <div id="otherPageContent" className="HidenContent"></div>
+            <RedirectPage />
             <div id="homePageContent" className="PageContent">
                 <div className="BackgroundText">Technologies</div>
                 <PageTitle pageTitle=" WHAT EXPERIENCE DO I HAVE? " />

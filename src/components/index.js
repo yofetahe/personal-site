@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 
+import RedirectPage from './RedirectPage';
+
 import './index.css';
 
 import home_pic from '../images/home.jpg';
@@ -8,8 +10,8 @@ class Home extends React.Component {
 
     render(){
         return (
-            <Fragment>
-                <div id="otherPageContent" className="HidenContent" data-text="ANIMATION TEST"></div>
+            <Fragment>                
+                <RedirectPage />
                 <div id="homePageContent" className="PageContent">
                     <div className="BackgroundText">Home</div>
                     <div className="HomePic_Container">
