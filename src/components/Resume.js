@@ -24,7 +24,7 @@ const Resume = () => {
             responsibilities: [
                 "Shadow senior software engineers on the front-end features developments using React, React-hook and React-Context and backend functionality development using Java, spring boot, and hibernate.",
                 "Participate on in house project development on the back end development using java and spring boot.",
-                "Development on front end (JavaScript, React, Angular and CSS) and backend technologies (Java and Node.js) and also Cloud Infrastructure (Cloud Foundry, Azure and AWS) and develop sample project (commercial site using React, Java and MySQL) and deploy the app on cloud foundry."
+                "Development on front end (JavaScript, Typescript, React, Angular and CSS) and backend technologies (Java, C# and Node.js) and also deploy applications on Cloud Infrastructure (Cloud Foundry, Azure and AWS) and develop personal project (commercial site using React, Java and MySQL) and deploy on cloud foundry."
             ]
         },
         { 
