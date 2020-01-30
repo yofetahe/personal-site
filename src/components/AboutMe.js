@@ -7,7 +7,6 @@ import './aboutMe.css';
 
 const AboutMe = () => {
     
-
     return (
         <Fragment>            
             <RedirectPage />

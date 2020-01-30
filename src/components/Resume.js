@@ -8,8 +8,8 @@ import './resume.css';
 
 import PDF from '../images/pdf.png';
 import WORD from '../images/word.png'
-import Resume_PDF from '../document/Yofetahe_Habtu_1_3_2020.pdf';
-import Resume_WORD from '../document/Yofetahe_Habtu_1_3_2020.docx';
+import Resume_PDF from '../document/Yofetahe_Habtu_Resume.pdf';
+import Resume_WORD from '../document/Yofetahe_Habtu_Resume.docx';
 
 const Resume = () => {
 
@@ -22,9 +22,9 @@ const Resume = () => {
             company: "HCL Technologies", 
             country: "WA, USA",
             responsibilities: [
-                "Attend intensive training on front end (JavaScript, React, Angular and CSS) and Java technologies (Java and Node.js) and also Cloud Infrastructure (Cloud Foundry, Azure and AWS)",
-                "Develop sample project (Commercial site using React, Java and MySQL) at the end of the training and deploy the app on cloud foundry.",
-                "Shadow senior software engineers on the front-end features and back end functionality development using React and Java"
+                "Shadow senior software engineers on the front-end features developments using React, React-hook and React-Context and backend functionality development using Java, spring boot, and hibernate.",
+                "Participate on in house project development on the back end development using java and spring boot.",
+                "Development on front end (JavaScript, React, Angular and CSS) and backend technologies (Java and Node.js) and also Cloud Infrastructure (Cloud Foundry, Azure and AWS) and develop sample project (commercial site using React, Java and MySQL) and deploy the app on cloud foundry."
             ]
         },
         { 

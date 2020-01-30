@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 import RedirectPage from './RedirectPage';
 
- const linkStyle = {
-        border: "1px solid gray",
-        borderRadius: "5px",
-        padding: "5px 15px",
-        textDecoration: "none",
-        color: "#fff",
-        backgroundColor: "rgba(112, 112, 112, 0.5)"
-    }
+const linkStyle = {
+    border: "1px solid gray",
+    borderRadius: "5px",
+    padding: "5px 15px",
+    textDecoration: "none",
+    color: "#fff",
+    backgroundColor: "rgba(112, 112, 112, 0.5)"
+}
 
 const h1Style = {
     fontSize: "80px",
