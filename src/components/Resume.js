@@ -16,9 +16,22 @@ const Resume = () => {
     const [experiance, setExperiance] = useState([
         { 
             id: "1",
+            position: "Technology Analyst (Client Microsoft)", 
+            startDate: "February 2020", 
+            endDate: "present", 
+            company: "Infosys Technologies", 
+            country: "WA, USA",
+            responsibilities: [
+                "Create, update and debug connectors (a layer between APIs and front-end) for Microsoft Store",
+                "Involve in system specification document preparation for a new connectors together with business analyst.",
+                "Add and update system documentation."
+            ]
+        },
+        { 
+            id: "1",
             position: "Software Engineer", 
             startDate: "June 2019", 
-            endDate: "present", 
+            endDate: "January 2020", 
             company: "HCL Technologies", 
             country: "WA, USA",
             responsibilities: [
