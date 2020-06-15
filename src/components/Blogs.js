@@ -11,16 +11,40 @@ const Blogs = () => {
 
     const [blogs, setBlogs] = useState([
         { 
-            id: "1", image: "image", title: "blog title 1", introduction: "introduction", full_content: "full content", create_date: "date" 
+            id: "1", 
+            icon: "image", 
+            title: "blog title 1", 
+            introduction: "introduction", 
+            full_content: "full content",
+            images: [],
+            create_date: "date" 
         },
         { 
-            id: "2", image: "image", title: "blog title 2", introduction: "introduction", full_content: "full content", create_date: "date" 
+            id: "2", 
+            icon: "image",
+            title: "blog title 2", 
+            introduction: "introduction", 
+            full_content: "full content",
+            images: [],
+            create_date: "date" 
         },
         { 
-            id: "3", image: "image", title: "blog title 3", introduction: "introduction", full_content: "full content", create_date: "date" 
+            id: "3", 
+            icon: "image", 
+            title: "blog title 3", 
+            introduction: "introduction", 
+            full_content: "full content", 
+            images: [],
+            create_date: "date" 
         },
         { 
-            id: "4", image: "image", title: "blog title 4", introduction: "introduction", full_content: "full content", create_date: "date" 
+            id: "4", 
+            icon: "image", 
+            title: "blog title 4", 
+            introduction: "introduction", 
+            full_content: "full content", 
+            images: [],
+            create_date: "date" 
         }
     ]);
 

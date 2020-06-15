@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import PageTitle from './PageTitle';
 import RedirectPage from './RedirectPage';
@@ -6,10 +6,11 @@ import RedirectPage from './RedirectPage';
 import HTML from '../images/TechIcons/HTML.png';
 import CSS from '../images/TechIcons/CSS.png';
 import JS from '../images/TechIcons/JavaScript.png';
-import angular from '../images/TechIcons/angular.png';
+import TypeScript from '../images/TechIcons/typescript.png';
+import Angular from '../images/TechIcons/angular.png';
 import jQuery from '../images/TechIcons/jQuery.png';
 import AJAX from '../images/TechIcons/ajax.png';
-import materialize from '../images/TechIcons/materialize.png';
+import Materialize from '../images/TechIcons/materialize.png';
 import react from '../images/TechIcons/react.png';
 import redux from '../images/TechIcons/redux.png';
 
@@ -39,7 +40,11 @@ import springBoot from '../images/TechIcons/spring_boot.png';
 
 import './technologies.css';
 
-const Technologies = () => {
+const Technologies = () => {    
+    const [frontEnd, setFrontEnd] = useState([ HTML, CSS, JS, TypeScript, Angular, jQuery, AJAX, Materialize, react, redux ]);
+    const [backEnd, setBackEnd] = useState([ java, NodeJS, python, CSharp, socket, sql, sqlite, mysql, mongodb, springBoot, springCloud, django, expressjs, flask, dotnet ]);
+    const [tools, setTools] = useState([ Intellij, eclipse, STS, visualStudioCode, netbean, github ]);
+
     return (
         <Fragment>
             <RedirectPage />
@@ -51,48 +56,29 @@ const Technologies = () => {
                         <div className="Technologies_Category">
                             <h4>Front End</h4>
                             <p>
-                                Front-end is a term that involves the building of webpages and user interfaces for web-applications. 
-                                It implements the structure, design, behavior, and animation of websites, web apps, or mobile 
+                                Front-end is a term that involves the building of webpages and user interfaces for web-applications.
+                                It implements the structure, design, behavior, and animation of websites, web apps, or mobile
                                 apps.
                             </p>
                             <div className="TechList">
                                 <h5>My Experience</h5>
-                                <img src={HTML} alt="HTML" />
-                                <img src={CSS} alt="CSS" />
-                                <img src={JS} alt="JS" />
-                                <img src={angular} alt="angular" />
-                                <img src={jQuery} alt="jQuery" />
-                                <img src={AJAX} alt="AJAX" />
-                                <img src={materialize} alt="materialize" />
-                                <img src={react} alt="react" />
-                                <img src={redux} alt="redux" />
+                                {frontEnd.map(tech => {
+                                    console.log(tech);
+                                    return <img src={tech} alt={tech} />
+                                })}
                             </div>
                         </div>
                         <div className="Technologies_Category">
                             <h4>Back End</h4>
                             <p>
-                                Back end development refers to the server side of an application that powers those components which, 
+                                Back end development refers to the server side of an application that powers those components which,
                                 together, enable the user-facing side of the website/application to even exist in the first place.
                             </p>
                             <div className="TechList">
                                 <h5>My Experience</h5>
-                                <img src={java} alt="java" />
-                                <img src={NodeJS} alt="nodejs" />
-                                <img src={python} alt="python" />
-                                <img src={CSharp} alt="csharp" />
-                                <img src={socket} alt="socket" />
-
-                                <img src={sql} alt="sql" />
-                                <img src={sqlite} alt="sqlite" />
-                                <img src={mysql} alt="mysql" />
-                                <img src={mongodb} alt="mongodb" />
-
-                                <img src={springBoot} alt="spring-boot" />
-                                <img src={springCloud} alt="spring-cloud" />                                
-                                <img src={django} alt="django" />
-                                <img src={expressjs} alt="expressjs" />
-                                <img src={flask} alt="flask" />
-                                <img src={dotnet} alt="dotnet" />
+                                {backEnd.map(tech => {
+                                    return <img src={tech} alt={tech} />
+                                })}                                
                             </div>
                         </div>
                         <div className="Technologies_Category">
@@ -100,12 +86,9 @@ const Technologies = () => {
                             <p>A programming tool or software development tool is a computer program that software developers use to create, debug, maintain, or otherwise support other programs and applications.</p>
                             <div className="TechList">
                                 <h5>My Experience</h5>
-                                <img src={Intellij} alt="HTML" />
-                                <img src={eclipse} alt="CSS" />
-                                <img src={STS} alt="JS" />
-                                <img src={visualStudioCode} alt="angular" />
-                                <img src={netbean} alt="jQuery" />
-                                <img src={github} alt="AJAX" />
+                                {tools.map(tech => {
+                                    return <img src={tech} alt={tech} />
+                                })}
                             </div>
                         </div>
                     </div>
