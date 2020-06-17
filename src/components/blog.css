@@ -41,15 +41,14 @@
         background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
         margin-bottom: 10px;
         display: flex;
-        padding: 10px;
+        padding: 10px 10px 10px 20px;
     }
 
     .BlogImage {
         display: inline;
-        width: 17%;
-        background-color: rgba(255, 255, 255, 0.4);
+        /* background-color: rgba(255, 255, 255, 0.1); */
         margin-right: 10px;
-        border-radius: 50%;
+        padding-top: 5px;
     }
     
 }

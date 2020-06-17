@@ -1,0 +1,47 @@
+/* smaller devices */
+@media (max-width: 767px) { 
+    .Blog_content {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 100px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .Blog_content {
+        position: absolute;
+        width: 80%;
+        display: inline-block;
+        margin-bottom: 200px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 1200px) {
+
+    .Blog_content {
+        position: absolute;
+        width: 60%;
+        display: inline-block;
+        margin-bottom: 200px;
+        text-align: justify;
+        line-height: 30px;
+    }
+
+    .didrde-code { 
+		background: #ffffff; 
+		overflow:auto;
+		width:auto;
+		border:solid gray;
+        border-width:.1em .1em .1em .8em;
+        padding:.2em .6em;
+        color: gray;
+    }
+
+	.didrde-code pre {
+		margin: 0; 
+		line-height: 125%
+	}
+}

@@ -1,13 +1,21 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 
+import PageTitle from './PageTitle';
 import RedirectPage from './RedirectPage';
 
-const BlogFullContent = () => {
+import './blogFullContent.css';
+
+const BlogFullContent = (props) => {
+    const blog = props.location.selectedBlog?props.location.selectedBlog.blog:'';
     return (
         <Fragment>
             <RedirectPage />
             <div id="homePageContent" className="PageContent">
-                Full Content
+                <div className="BackgroundText">Blog</div>
+                <PageTitle pageTitle={blog.title} />
+                <div className="Blog_content">
+                    <div dangerouslySetInnerHTML={{ __html: blog.full_content }}></div>
+                </div>
             </div>
         </Fragment>
     );
