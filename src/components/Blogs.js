@@ -4,9 +4,10 @@ import Blog from './Blog';
 
 import PageTitle from './PageTitle';
 import RedirectPage from './RedirectPage';
-import { blogsContent } from './blogContent/blogsList'
+import { blogsContent } from './data/blogsList'
 
 import './blogs.css';
+import SearchIcon from '../images/search_icon.png';
 
 const Blogs = () => {
 
@@ -14,7 +15,7 @@ const Blogs = () => {
 
     function handleSearch() {
         var searchWord = document.getElementById('searchInput').value;
-        if(searchWord === '') {
+        if (searchWord === '') {
             setBlogs(blogsContent);
         } else {
             const searchBlogContent = blogsContent.filter(blog => blog.title.toLowerCase().includes(searchWord.toLowerCase()));
@@ -22,25 +23,27 @@ const Blogs = () => {
         }
     }
 
-    return (
-        <Fragment>
-            <RedirectPage />
-            <div id="homePageContent" className="PageContent">
-                <div className="BackgroundText">Blogs</div>
-                <PageTitle pageTitle="WHICH TECHNOLOGY DID I STUDY? "/>
-                <div className="Blogs_List">
+    return (<Fragment>
+        <RedirectPage />
+        <div id="homePageContent"
+            className="PageContent" >
+            <div className="BackgroundText" > Blogs </div>
+            <PageTitle pageTitle="TECHNOLOGIES I'M INTERESTED IN " />
+            <div className="Blogs_List" >
 
-                    <div className="searchBlock">
-                        <input id="searchInput" className="searchInput" /><div onClick={handleSearch} className="searchBtn">Search</div>
+                <div className="searchBlock" >
+                    <input id="searchInput" className="searchInput" />
+                    <div className="searchBtn">
+                        <img src={SearchIcon} alt="Search" className="searchIcon" onClick={handleSearch} width="30" height="30" />
                     </div>
+                </div >
 
-                    {blogs.map(blog => {
-                        return <Blog blog={blog} />;
-                    })}
-                    
-                </div>
+                {blogs.map(blog => {
+                    return <Blog blog={blog} />;
+                })}
             </div>
-        </Fragment>
+        </div>
+    </Fragment>
     );
 }
 

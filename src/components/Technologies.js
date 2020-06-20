@@ -55,7 +55,7 @@ const Technologies = () => {
                     <div className="Technologies_exp">
                         <div className="Technologies_Category">
                             <h4>Front End</h4>
-                            <p>
+                            <p id="tech_description">
                                 Front-end is a term that involves the building of webpages and user interfaces for web-applications.
                                 It implements the structure, design, behavior, and animation of websites, web apps, or mobile
                                 apps.
@@ -70,7 +70,7 @@ const Technologies = () => {
                         </div>
                         <div className="Technologies_Category">
                             <h4>Back End</h4>
-                            <p>
+                            <p id="tech_description">
                                 Back end development refers to the server side of an application that powers those components which,
                                 together, enable the user-facing side of the website/application to even exist in the first place.
                             </p>
@@ -83,7 +83,7 @@ const Technologies = () => {
                         </div>
                         <div className="Technologies_Category">
                             <h4>Tools</h4>
-                            <p>A programming tool or software development tool is a computer program that software developers use to create, debug, maintain, or otherwise support other programs and applications.</p>
+                            <p id="tech_description">A programming tool or software development tool is a computer program that software developers use to create, debug, maintain, or otherwise support other programs and applications.</p>
                             <div className="TechList">
                                 <h5>My Experience</h5>
                                 {tools.map(tech => {

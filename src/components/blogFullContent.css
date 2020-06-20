@@ -62,3 +62,8 @@
     color: #fff;
     font-weight: bold;
 }
+
+.fullContent {
+    padding-left: 10px;
+    padding-right: 10px;
+}

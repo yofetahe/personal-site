@@ -1,5 +1,6 @@
 /* smaller devices */
-@media (max-width: 767px) { 
+
+@media (max-width: 767px) {
     .Blogs_List {
         position: absolute;
         width: 100%;
@@ -8,7 +9,9 @@
     }
 }
 
+
 /* Medium devices (landscape tablets, 768px and up) */
+
 @media (min-width: 768px) and (max-width: 1199px) {
     .Blogs_List {
         position: absolute;
@@ -18,40 +21,45 @@
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 1200px) {
 
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media (min-width: 1200px) {
     .Blogs_List {
         position: absolute;
         width: 60%;
         display: inline-block;
         margin-bottom: 200px;
     }
+}
 
-    .searchBlock {
-        background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
-        width: 100%;
-        margin-bottom: 10px;
-        padding: 20px 0px;
-        text-align: right;
-    }
+.searchBlock {
+    background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 20px 0px;
+    text-align: right;
+}
 
-    .searchInput {
-        margin-right: 10px;
-        display: inline;
-        height: 25px;
-        color: #fff;
-        background-color: rgba(128, 128, 128, 0.5);
-        border-radius: 5px;
-        border: #b9b9b9 solid 1px;
-    }
-    .searchBtn {
-        display: inline;
-        border: 1px;
-        border-radius: 20px;
-        background-color: rgba(128, 128, 128, 0.5);
-        padding: 5px 25px;
-        margin-right: 10px;
-        cursor: pointer;
-    }
+.searchInput {
+    margin-right: 10px;
+    display: inline;
+    height: 25px;
+    color: #fff;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 5px;
+    border: #b9b9b9 solid 1px;
+    vertical-align: top;
+}
+
+.searchBtn {
+    display: inline;
+    margin-right: 10px;       
+}
+
+.searchIcon {
+    margin:auto;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
 }

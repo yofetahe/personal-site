@@ -10,11 +10,14 @@ const Blog = (props) => {
                 <img id="blogIcon" src={'/images/TechIcons/' + props.blog.category + '.png'} alt={props.blog.category} />
             </div>
             <div className="Blog">
-                <p id="title"> {props.blog.title} </p>
+                <div id="title">
+                    <img id="blogSmallIcon" src={'/images/TechIcons/' + props.blog.category + '.png'} alt={props.blog.category} />
+                    <span id="titleContent">{props.blog.title}</span>
+                </div>
                 <p id="introduction"> {props.blog.introduction}
-                    <Link id="readmore" to={{ 
-                        pathname: `/BlogContent/${props.blog.id}`, 
-                        selectedBlog: { blog: props.blog } 
+                    <Link id="readmore" to={{
+                        pathname: `/BlogContent/${props.blog.id}`,
+                        selectedBlog: { blog: props.blog }
                     }}>
                         ...read more
                     </Link>

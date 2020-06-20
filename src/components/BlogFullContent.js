@@ -7,7 +7,7 @@ import RedirectPage from './RedirectPage';
 import './blogFullContent.css';
 
 const BlogFullContent = (props) => {
-    const blog = props.location.selectedBlog?props.location.selectedBlog.blog:'';
+    const blog = props.location.selectedBlog ? props.location.selectedBlog.blog : '';
     return (
         <Fragment>
             <RedirectPage />
@@ -24,7 +24,7 @@ const BlogFullContent = (props) => {
                         </Link>
                     </div>
 
-                    <div dangerouslySetInnerHTML={{ __html: blog.full_content }}></div>
+                    <div className="fullContent" dangerouslySetInnerHTML={{ __html: blog.full_content }}></div>
 
                 </div>
             </div>
