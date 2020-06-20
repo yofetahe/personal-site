@@ -28,7 +28,7 @@
     .BlogImage {
         display: inline;
         width: 17%;
-        background-color: rgba(255, 255, 255, 0.4);
+        /* background-color: rgba(255, 255, 255, 0.4); */
         margin-right: 10px;
         border-radius: 50%;
     }
@@ -36,12 +36,12 @@
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 1200px) {
-    .Blog_Content {
+    .Blog_Content {        
         width: 100%;
         background-image: linear-gradient(to right, rgba(24, 24, 24, 0.2), rgba(153, 153, 153, 0.4));
         margin-bottom: 10px;
         display: flex;
-        padding: 10px 10px 10px 20px;
+        /* padding: 10px 10px 10px 20px; */
     }
 
     .BlogImage {
@@ -50,10 +50,15 @@
         margin-right: 10px;
         padding-top: 5px;
     }
+
+    .Blog {
+        padding-right: 30px;
+        text-align: justify;
+    }
     
 }
 
-.BlogContent #title {
+.Blog #title {
     font-size: 25px;
     font-style: italic;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;

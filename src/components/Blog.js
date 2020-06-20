@@ -9,7 +9,7 @@ const Blog = (props) => {
             <div className="BlogImage">
                 <img id="blogIcon" src={'/images/TechIcons/' + props.blog.category + '.png'} alt={props.blog.category} />
             </div>
-            <div className="BlogContent">
+            <div className="Blog">
                 <p id="title"> {props.blog.title} </p>
                 <p id="introduction"> {props.blog.introduction}
                     <Link id="readmore" to={{ 

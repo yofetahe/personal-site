@@ -5,6 +5,7 @@
         width: 100%;
         display: inline-block;
         margin-bottom: 100px;
+        text-align: justify;
     }
 }
 
@@ -15,6 +16,7 @@
         width: 80%;
         display: inline-block;
         margin-bottom: 200px;
+        text-align: justify;
     }
 }
 
@@ -43,5 +45,20 @@
 	.didrde-code pre {
 		margin: 0; 
 		line-height: 125%
-	}
+    }    
+}
+
+.bottomLine {
+    border-bottom: 1px solid gray;
+    margin: 10px 0px;
+}
+
+#backLink {
+    text-decoration: none;
+    color: gray;
+}
+
+.headerTitle {
+    color: #fff;
+    font-weight: bold;
 }

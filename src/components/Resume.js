@@ -22,8 +22,8 @@ const Resume = () => {
             company: "Infosys Technologies (Client Microsoft)", 
             country: "WA, USA",
             responsibilities: [
-                "Create, update and debug connectors (a layer between APIs and front-end) for Microsoft Store",
-                "Involve in system specification document preparation for a new connectors together with business analyst.",
+                "Create, update and debug connectors (a layer between APIs and front-end) for Microsoft Store Application.",
+                "Involve in system specification document preparation for new connectors together with business analysts.",
                 "Add and update system documentation."
             ]
         },
