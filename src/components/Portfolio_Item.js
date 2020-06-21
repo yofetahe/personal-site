@@ -24,7 +24,7 @@ const PortfolioItem = (props) => {
         <div className="Project_Table">            
             <div className="Project_Row">
                 <div className="Project_Image Project_Cell">
-                    <img id="projectImage" src={image} alt="image" />
+                    <img id="projectImage" src={image} alt={props.project.id} />
                 </div>
                 <div className="Project_Desc Project_Cell">
                     <div className="Project_Title">{props.project.title}</div>

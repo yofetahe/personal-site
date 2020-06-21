@@ -114,7 +114,7 @@ export const blogsContent = [
         <div>******</div>
         <div>4.<strong> Save Python Programs</strong> - document_name.py</div>
         <div>&nbsp;</div>
-        <div>5. <strong>Strings</strong> - "hi student" or 'hi student' or "he\'s a student" or "student said, \"hi\" to me"</div>
+        <div>5. <strong>Strings</strong> - "hi student" or 'hi student' or "he is a student" or "student said, hi to me"</div>
         <div>&nbsp;</div>
         <div>6. <strong>Strings</strong>&nbsp;</div>
         <div style="padding-left: 30px;">//concatinating number with strings</div>
