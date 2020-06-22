@@ -1,56 +1,258 @@
-export const blogsContent = [
+export const blogsContent = [    
+    { 
+        id: "12", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Basics", "CLI", "Logging", "Targeting", "CF Help", "Orgs and Spaces", "CF curl", "Environment variables"],
+        time: "30 min", 
+        title: "CFCD Exam - Part I: Basics", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part I: basics is a preliminary to the CFCD exam that address about CLI, CLI Plugin, Logging, Targeting, CF Help, Orgs & Spaces, CF curl and Environment variables`, 
+        full_content: `<p><b>PART I - Basics</b>: is a preliminary to the CFCD exam that address about CLI, CLI Plugin, Logging, Targeting, CF Help, Orgs & Spaces, CF curl and Environment variables</p>
+        <p><strong>#</strong><span style="text-decoration: underline;"><strong>CLI</strong></span></p>
+        <p>* To configure language for cli<br /> --- cf config --local [ LANG ]<br /> * Login<br /> --- cf login [a API_URL] [-u USERNAME] [-p PASSWORD] [-o ORG] [-s SPACE]<br /> NOTE - API_URL --- api.run.pivotal.io</p>
+        <p>--- Alternative to login<br /> Write script to login and set target using the non-interactive - cf api, cf auth, cf target</p>
+        <p>--- the cf CLI saves a "config.json" file --- contains API Endpoint, org, space values and access token</p>
+        <p>* Users and Roles<br /> --- Users can be at the organization or space level<br /> --- Commands for listing Users<br /> * cf org-users [ ORG-NAME ]<br /> * cf space-users [ ORG-NAME ] [ SPACE-NAME ]<br /> --- Commands for managing roles<br /> * Available roles --- OrgManager, BillingManager, OrgAuditor, SpaceManager, SpaceDeveloper, SpaceAuditor<br /> * Commands </p>
+        <ul><li>cf set-org-role [ USERNAME ] [ ORG ] [ ROLE ] --- eg. cf set-org-role yofetahe@gmail.com "YamGet IT Solution" OrgManager</li>
+        <li>cf unset-org-role</li>
+        <li>cf set-space-role</li>
+        <li>cf unset-space-role</li></ul>
+        <p><strong>#</strong><span style="text-decoration: underline;"><strong>CLI Plugin</strong></span><br /> -- CF CLI includes plugin functionality --- to ADD custom commands to the cf CLI.<br /> -- created by CF developers and 3rd party developers.<br /> -- cf CLI identifies a plugins by their BINERY FILENAME (DEVELOPER-DEFINED plugin name)<br /> * Plugins <br /> --- enable developers to add custom COMMANDS to the cf CLI. <br /> --- possible to install and use plugins that CF developers and 3rd party developers create.<br /> * Installing a Plugins</p>
+        <ol><li>download a binary or the source code for a plugin from a trusted provider</li>
+        <li>Run --- cf install-plugin BINARY-FILE-NAME</li></ol>
+        <p>* Running Plugin Command</p>
+        <ul><li>cf plugins --- to list all the plugins and all commands that the plugins provide</li>
+        <li>cf PLUGIN-COMMAND --- to execute a plugin command</li></ul>
+        <p>* Checking for Plugin Updates</p>
+        <ul><li>cf plugins --outdated ---- to check all registered plugin repositories for newer versions fo currently installed plugins</li>
+        </ul>
+        <p>* Uninstalling a plugin</p>
+        <ul>
+        <li>cf uninstall-plugin PLUGIN-NAME --- not BINARY-FILE-NAME</li>
+        </ul>
+        <p><strong>#</strong><span style="text-decoration: underline;"><strong>Logging</strong></span><br /> * Loggregator -- is responsible for logging in CF, it provides stream of log output from the app and from CF system components that interact with your app during updates and execution<br />* Loggregator Components</p>
+        <ul>
+        <li>Loggregator Agent - run on both CF component VMs and Diego cell VMs. They receive logs and metircs from APPs and CF Components located on those VMs.</li>
+        <li>System Metric Agent -</li>
+        <li>Doppler - receive logs and metrics from Loggregator agents</li>
+        <li>Traffic Controller - poll Doppler servers for logs and metrics</li>
+        <li>Reverse Log Proxy - collect logs and metrics from Dopplers and forward them to Log Cache and Traffic Controllers</li>
+        <li>Syslog Agents</li>
+        <li>Syslog Binding Cache -</li>
+        <li>Firehose - websocket endpoint located in traffic controller that streams all event data from a CF deployment</li>
+        <li>Log Cache - allows to view logs and metrics from the Firehose over a specified period of time</li>
+        <li>Nozzle - are programs that consume data from Firehose and can be configure to select, buffer, and transform data, and forward it to other apps and services.</li>
+        </ul>
+        <p>* every log line contains 4 fields </p>
+        <ul>
+        <li>Timestamp</li>
+        <li>Log type(Origin Code) - API, STG, RTR, LGR, APP, SSH, CELL</li>
+        <li>Channel (OUT - for stdout, ERR - for stderr) - for java - System.err.print("error");</li>
+        <li>Message</li>
+        </ul>
+        <p>* to view logs in cli</p>
+        <ul>
+        <li>TAILING LOGS - cf logs [ APP-NAME ] ----- to stream loggregator output to the terminal</li>
+        <li>DUMPING LOGS - cf logs [ APP-NAME ] --recent ----- to display all the lines in the loggregator buffer.</li>
+        </ul>
+        <p><strong># <span style="text-decoration: underline;">Targeting</span></strong><br /> * cf installation or end-point you can interact with<br /> * cf target</p>
+        <p># CF Help</p>
+        <ul>
+        <li>cf help | h</li>
+        <li>cf [ key ] --help | -h</li>
+        </ul>
+        <p><strong># <span style="text-decoration: underline;">Orgs and Spaces</span></strong><br /> --- ORGs - a DEVELOPMENT ACCOUNT that an individual or multiple collaborators can own and use.</p>
+        <ul>
+        <li>All collaborator access an org with user accounts - roles --- OrgManager, OrgAuditor, OrgBillingManager</li>
+        <li>Org has ACTIVE status by default, but an Admin can set the status to SUSPENDED</li>
+        </ul>
+        <p>--- SPACEs - a shared location for app development, deployment, and maintenance.</p>
+        <ul>
+        <li>every APP, SERVICE &amp; ROUTE is scoped to a space.</li>
+        </ul>
+        <p>--- ORG-MANAGER - can set quotas for the space</p>
+        <ul>
+        <li>usage of paid services</li>
+        <li># of app instances, service keys, routes, reserved route ports</li>
+        <li>Memory used across the space</li>
+        <li>Memory used by a single app instances</li>
+        </ul>
+        <p>--- User Roles - it is user's permissions in orgs and spaces. User can have more than one role.<br /> --- User Roles Type - each type includes different permissions</p>
+        <ul>
+        <li>Admin, Admin Read-only, Global Auditor,</li>
+        <li>Org Managers, Org Auditors, Org Billing Managers, Org Users,</li>
+        <li>Space Managers, Space Developers, Space Auditors</li>
+        </ul>
+        <p><strong># <span style="text-decoration: underline;">CF curl</span></strong><br /> --- executes a request to the targeted API endpoint<br /> --- by default, it will do a GET to the specified PATH. If the data is provided via -d, a POST will be performed<br /> --- command<br /> - cf curl PATH [-iv] [-X METHOD] [-H HEADER]... [-d DATA] [--output FILE]<br /> - eg.</p>
+        <ul>
+        <li>cf curl "/v2/apps" -d @/path/to/file</li>
+        <li>cf curl "/v2/apps" -X GET -H "Content-Type: application/x-www-form-urlencoded" -d 'q=name:myapp'</li>
+        <li>cf curl -H "Content-Type: application/json" -X POST -d '{"firstName":"foo", "lastName":"bar"}' http://[ APP-URL ]/user</li>
+        <li>cf curl http:// [ APP-URL ]/user</li>
+        </ul>
+        <p><strong># <span style="text-decoration: underline;">Environment variables</span></strong><br /> --- the means by which the CF runtime communicates with a deployed app about its environment<br /> --- cf env [ APP-NAME ] --- list the env variables for the app<br /> * VCAP_APPLICATION &amp; VCAP_SERVICES --- variables provided in the container environment<br /> --- cf set-env [ APP-NAME ] [ ENV-VAR-NAME ] [ ENV-VAR-VALUE ]<br /> --- App-Specific System Variables </p>
+        <ul>
+        <li>CF_INSANCE_ADDR, CF_INSTANCE_GUID, CF_INSTANCE_INDEX, CF_INSTANCE_IP, CF_INSTANCE_INTERNAL_IP, CF_INSTANCE_PORT, CF_INSTANCE_PORTS</li>
+        <li>DATABASE_URL, HOME, LANG, MEMORY_LIMIT, PORT, PWD, TMPDIR, USER, VCAP_APP_PORT</li>
+        <li>VCAP_APPLLICATION --- contains the associated attributes for a deployed app</li>
+        <li>VCAP_SERVICES -- contains connection details</li>
+        </ul>
+        <p>--- ENVIRONMENT VARIABLE GROUPS<br /> * are system-wide variables that enable operators to apply a group of environment variables to all RUNNING apps and STAGING apps separately<br /> * Commands for environment variable groups are</p>
+        <ul>
+        <li>running-environment-variable-group OR revg</li>
+        <li>staging-environment-variable-group OR sevg</li>
+        <li>set-running-environment-variable-group OR srevg</li>
+        <li>set-staging-environment-variable-group OR ssevg</li>
+        </ul>`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
+    { 
+        id: "11", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Application Lifecycle", "Cloud", "Buildpacks", "buildpack sources", "Stacks", "Health checks"],
+        time: "30 min", 
+        title: "CFCD Exam - Part II: Application Lifecycle", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part II: Application Lifecycle is part of the CFCD exam that address about Buildpacks, buildpack sources, Stacks,
+	    Health checks, and buildpack release notes`, 
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
+    { 
+        id: "10", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Application Management", "CF push", "CF start", "CF stop", "CF restart", 
+        "CF restage", "CF delete", "CF app", "horizontal Scaling", "vertical Scaling", "Application manifests"],
+        time: "30 min", 
+        title: "CFCD Exam - Part III: Application Management", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part III: Application Management is a part of the CFCD exam that address about CF push, CF start/stop/restart/restage,
+		CF delete, CF app, Scaling (horizontal/vertical), and Application manifests`, 
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },    
+    { 
+        id: "9", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Services", "service brokers", "managed services", "service instance lifecycle", "UPSI", 
+        "Sharing service instances", "Space scoped brokers", "VCAP_APPLICATION", "VCAP_SERVICES", "Service keys"],
+        time: "30 min", 
+        title: "CFCD Exam - Part IV: Services", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part IV: Services is a part of the CFCD exam that address about service brokers, managed services, service instance lifecycle & use, UPSI, 
+        Sharing service instances, Space scoped brokers, VCAP_APPLICATION, VCAP_SERVICES, and Service keys`,
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
+    { 
+        id: "8", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Routing", "Route management", "interapplication communication"],
+        time: "30 min", 
+        title: "CFCD Exam - Part V: Routing", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part V: Routing is a part of the CFCD exam that address about Route management and inter-application communication`, 
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
+    { 
+        id: "7", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Platform Security", "Roles and Permissions", "Application security groups"],
+        time: "30 min", 
+        title: "CFCD Exam - Part VI: Platform Security", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part VI: Platform Security is a part of the CFCD exam that address about Roles & Permissions, and Application security groups`, 
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
+    { 
+        id: "6", 
+        icon: "cloud_foundry",
+        category: "Cloud Foundry",
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Troubleshooting", "CF SSH", "Route confusion", "Out of memory", "CF TRACE", "Troubleshoot SVC connection", "Route collision"],
+        time: "30 min", 
+        title: "CFCD Exam - Part VII: Troubleshooting", 
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        Part VII: Troubleshooting is CFCD exam last part that address about CF SSH, Route confusion, Out of memory, CF TRACE, Troubleshoot SVC connection, and Route collision`, 
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 21, 2020" 
+    },
     { 
         id: "5", 
-        icon: "image",
-        category: "typescript",
+        icon: "typescript",
+        category: "TypeScript",
+        searchKey: ["typescript"],
         time: "45 min", 
         title: "TypeScript", 
-        introduction: `TypeScript is a strongly-typed superset of JavaScript, which means it adds some syntactical benefits 
-        to the language while still letting you write normal JavaScript if you want to. It encourages a more declarative 
+        introduction: `TypeScript is a strongly typed superset of JavaScript, which means it adds some syntactical benefits 
+        to the language and still it allows to write normal JavaScript.`, 
+        full_content: `<p>TypeScript is a strongly-typed superset of JavaScript, which means it adds some syntactical benefits 
+        to the language and still it allows to write normal JavaScript. It encourages a more declarative 
         style of programming through things like interfaces and static typing (more on these later), offers modules and classes, 
         and most importantly, integrates relatively well with popular JavaScript libraries and code. You could think of it as 
         a strongly static layer over current JavaScript that has a few features to make life (and debugging especially) a bit 
-        more bearable.`, 
-        full_content: "Full content coming soon ...",
+        more bearable.</p><p>Full content coming soon ...</p>`,
         images: [],
         create_date: "June 17, 2020" 
     },
     { 
         id: "4", 
-        icon: "image",
-        category: "nodejs",
+        icon: "nodejs",
+        category: "Node.js",
+        searchKey: ["node", "nodejs"],
         time: "30 min", 
         title: "Node.js", 
         introduction: `Node.js is an open source and cross-platform runtime environment for executing 
         JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and it’s not a programming language. 
         Most of the people are confused and understand it’s a framework or a programming language.`, 
-        full_content: "Full content coming soon ...",
+        full_content: `<p>Node.js is an open source and cross-platform runtime environment for executing 
+        JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and it’s not a programming language. 
+        Most of the people are confused and understand it’s a framework or a programming language.</p><p>Full content coming soon ...</p>`,
         images: [],
         create_date: "June 17, 2020" 
     },
     { 
         id: "3", 
-        icon: "image",
-        category: "java",
+        icon: "java",
+        category: "Java",
+        searchKey: ["java"],
         title: "Java Core",
         time: "50 min", 
         introduction: `Java is among the most popular programming languages out there, mainly because of how versatile and compatible it is. Java can be used for different purpose such as developing Mobile applications (specially Android apps),
+        Desktop applications, Web applications, Web servers and application servers, Games, Database connection, and many more.`, 
+        full_content: `<p>Java is among the most popular programming languages out there, mainly because of how versatile and compatible it is. Java can be used for different purpose such as developing Mobile applications (specially Android apps),
         Desktop applications, Web applications, Web servers and application servers, Games, Database connection, and many more.
         As of 2019, 88% market share of all smartphones run on Android, the mobile operating system written in Java. Knowing Java opens a great deal of doors for you as a developer. 
         Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
-        It is one of the most popular programming language in the world, easy to learn and simple to use, open-source and free, secure, fast and powerful, and has a huge community support`, 
-        full_content: "Full content coming soon ...",
+        It is one of the most popular programming language in the world, easy to learn and simple to use, open-source and free, secure, fast and powerful, and has a huge community support</p>
+        <p></p>Full content coming soon ...</p>`,
         images: [],
         create_date: "June 16, 2020" 
     },
     { 
         id: "2", 
-        icon: "image",
-        category: "python",
+        icon: "python",
+        category: "Python",
+        searchKey: ["python"],
         time: "45 min", 
         title: "Python with Examples", 
         introduction: "Python has syntax that allows developers to write programs with fewer lines than some other programming languages and it has a simple syntax similar to the English language. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This content showed you introduction to the basic syntax with example.", 
-        full_content: `<div>1. <strong>Number</strong> -- Addition, Subtraction, Multiplication, Division, Module(remainder), Exponent(**)</div>
+        full_content: `<p>Python has syntax that allows developers to write programs with fewer lines than some other programming languages and it has a simple syntax similar to the English language. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This content showed you introduction to the basic syntax with example.</p>
+        <div>1. <strong>Number</strong> -- Addition, Subtraction, Multiplication, Division, Module(remainder), Exponent(**)</div>
         <div>2. <strong>Variable</strong> -- x = 10, g = input("Enter Number: ")//to request a user to enter the number</div>
         <div style="text-align: left; padding-left: 30px;">F = 0</div>
         <div style="text-align: left; padding-left: 30px;">X = 1</div>
@@ -503,35 +705,36 @@ export const blogsContent = [
     },
     { 
         id: "1", 
-        icon: "image",
-        category: "STS", 
+        icon: "STS",
+        category: "Spring",
+        searchKey: ["spring", "framework", "spring framework"], 
         title: "Spring Framework",
         time: "20 min",
-        introduction: "Spring is the most popular application development framework for Java technology." + 
-        "And it is an open source and lightweight Java platform. Large number of developers around the world " + 
-        "use Spring Framework to create high performing, easily testable, and reusable code. " + 
-        "Spring makes Java productive, reactive, cloud ready, simple, and modern.", 
-        full_content: "<h3>Spring Framework - Overview</h3>" + 
-        "<p>Spring is the most popular application development framework for Java technology." + 
-        "And it is an open source and lightweight Java platform. Large number of developers around the world " + 
-        "use Spring Framework to create high performing, easily testable, and reusable code. " + 
-        "Spring makes Java productive, reactive, cloud ready, simple, and modern.</p>" + 
-        "Spring can do Microservices (quickly deliver production-grade features with independently evolvable microservices.), Reactive (Spring's asynchronous nonblocking architecture. It means get more from computing resources.), Cloud (Connect and scale services for whatever platform), Web apps (Frameworks for fast, secure, and responsive web applications connected to any data store.), Serverless (the ultimate flexibility. Scale up on demand and scale to zero with there's no demand), Event Driven (Integrate with enterprise. React to business events. Act on streaming data in realtime.), and Batch (automated tasks. Offline processing of data at a time.)." +
-        "<h3>Spring Framework - Architecture</h3>" +
-        "<p>Level 1. Core Container --> Beans, Core, Context, Expression Language </p>" +
-        "<p>Level 2. Data Access Integration --> JDBC, ORM, OXM, JMS, Transactions </p>" +
-        "<p>Level 3. Web --> Servlet, Porlet, Struts </p>" +
-        "<p>Level 3. Miscellaneous --> AOP, Aspects, Instrumentation</p>" +
-        "<h3>Spring Framework - IoC Container</h3>" +
-        "<p>The container creates the object(Beans), wire them together, configure them, and manage their lifecycle from creation till destruction.</div>" +
-        "<ul><li><b>Spring BeanFactory Container</b>:<br/> provide basic support for DI and defined by org.springframework.beans.factory.BeanFactory interface.<br/>" + 
-        "<div class=\"didrde-code\"><pre>XmlBeanFactory factory = new XmlBeanFactory (new ClassPathResource(\"Beans.xml\")); <br/>" + 
-        "HelloWorld obj = (HelloWorld) factory.getBean(\"helloWorld\"); <br/>" + 
-        "obj.getMessage();</pre></div></li>" +
-        "<li><b>Spring ApplicationContext Container</b>:<br/> spring's more advanced container and defined by org.springframework.context.ApplicationContext interface<br/>" +
-        "<div class=\"didrde-code\"><pre>ApplicationContext context = new FileSystemXmlApplicationContext (\"C:/path/to/bean/xml/file/Beans.xml\");  <br/>" + 
-        "HelloWorld obj = (HelloWorld) context.getBean(\"helloWorld\"); <br/>" + 
-        "obj.getMessage();</pre></div></li></ul>",
+        introduction: `Spring is the most popular application development framework for Java technology. 
+        And it is an open source and lightweight Java platform. Large number of developers around the world
+        use Spring Framework to create high performing, easily testable, and reusable code.
+        Spring makes Java productive, reactive, cloud ready, simple, and modern.`, 
+        full_content: `<h3>Spring Framework - Overview</h3>
+        <p>Spring is the most popular application development framework for Java technology.
+        And it is an open source and lightweight Java platform. Large number of developers around the world
+        use Spring Framework to create high performing, easily testable, and reusable code.
+        Spring makes Java productive, reactive, cloud ready, simple, and modern.</p>
+        Spring can do Microservices (quickly deliver production-grade features with independently evolvable microservices.), Reactive (Spring's asynchronous nonblocking architecture. It means get more from computing resources.), Cloud (Connect and scale services for whatever platform), Web apps (Frameworks for fast, secure, and responsive web applications connected to any data store.), Serverless (the ultimate flexibility. Scale up on demand and scale to zero with there's no demand), Event Driven (Integrate with enterprise. React to business events. Act on streaming data in realtime.), and Batch (automated tasks. Offline processing of data at a time.).
+        <h3>Spring Framework - Architecture</h3>
+        <p>Level 1. Core Container --> Beans, Core, Context, Expression Language </p>
+        <p>Level 2. Data Access Integration --> JDBC, ORM, OXM, JMS, Transactions </p>
+        <p>Level 3. Web --> Servlet, Porlet, Struts </p>
+        <p>Level 3. Miscellaneous --> AOP, Aspects, Instrumentation</p>
+        <h3>Spring Framework - IoC Container</h3>
+        <p>The container creates the object(Beans), wire them together, configure them, and manage their lifecycle from creation till destruction.</div>
+        <ul><li><b>Spring BeanFactory Container</b>:<br/> provide basic support for DI and defined by org.springframework.beans.factory.BeanFactory interface.<br/>
+        <div class="didrde-code"><pre>XmlBeanFactory factory = new XmlBeanFactory (new ClassPathResource("Beans.xml")); <br/>
+        HelloWorld obj = (HelloWorld) factory.getBean("helloWorld"); <br/>
+        obj.getMessage();</pre></div></li>
+        <li><b>Spring ApplicationContext Container</b>:<br/> spring's more advanced container and defined by org.springframework.context.ApplicationContext interface<br/>
+        <div class="didrde-code"><pre>ApplicationContext context = new FileSystemXmlApplicationContext ("C:/path/to/bean/xml/file/Beans.xml");  <br/>
+        HelloWorld obj = (HelloWorld) context.getBean("helloWorld"); <br/>
+        obj.getMessage();</pre></div></li></ul>`,
         images: [],
         create_date: "June 14, 2020" 
     }

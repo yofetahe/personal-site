@@ -18,7 +18,7 @@ const Blogs = () => {
         if (searchWord === '') {
             setBlogs(blogsContent);
         } else {
-            const searchBlogContent = blogsContent.filter(blog => blog.title.toLowerCase().includes(searchWord.toLowerCase()));
+            const searchBlogContent = blogsContent.filter(blog => blog.searchKey.some(key => searchWord.toLowerCase() === key.toLowerCase()));
             setBlogs(searchBlogContent);
         }
     }

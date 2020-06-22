@@ -14,7 +14,7 @@ const BlogFullContent = (props) => {
             <div id="homePageContent" className="PageContent">
 
                 <div className="BackgroundText">Blog</div>
-                <PageTitle pageTitle={blog.title} />
+                <PageTitle pageTitle={blog.category} />
 
                 <div className="Blog_content">
 

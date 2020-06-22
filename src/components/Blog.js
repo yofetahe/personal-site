@@ -7,11 +7,11 @@ const Blog = (props) => {
     return (
         <div className="Blog_Content">
             <div className="BlogImage">
-                <img id="blogIcon" src={'/images/TechIcons/' + props.blog.category + '.png'} alt={props.blog.category} />
+                <img id="blogIcon" src={'/images/TechIcons/' + props.blog.icon + '.png'} alt={props.blog.icon} />
             </div>
             <div className="Blog">
                 <div id="title">
-                    <img id="blogSmallIcon" src={'/images/TechIcons/' + props.blog.category + '.png'} alt={props.blog.category} />
+                    <img id="blogSmallIcon" src={'/images/TechIcons/' + props.blog.icon + '.png'} alt={props.blog.icon} />
                     <span id="titleContent">{props.blog.title}</span>
                 </div>
                 <p id="introduction"> {props.blog.introduction}
