@@ -41,9 +41,9 @@ import springBoot from '../images/TechIcons/spring_boot.png';
 import './technologies.css';
 
 const Technologies = () => {    
-    const [frontEnd, setFrontEnd] = useState([ HTML, CSS, JS, TypeScript, Angular, jQuery, AJAX, Materialize, react, redux ]);
-    const [backEnd, setBackEnd] = useState([ java, NodeJS, python, CSharp, socket, sql, sqlite, mysql, mongodb, springBoot, springCloud, django, expressjs, flask, dotnet ]);
-    const [tools, setTools] = useState([ Intellij, eclipse, STS, visualStudioCode, netbean, github ]);
+    const [frontEnd] = useState([ HTML, CSS, JS, TypeScript, Angular, jQuery, AJAX, Materialize, react, redux ]);
+    const [backEnd] = useState([ java, NodeJS, python, CSharp, socket, sql, sqlite, mysql, mongodb, springBoot, springCloud, django, expressjs, flask, dotnet ]);
+    const [tools] = useState([ Intellij, eclipse, STS, visualStudioCode, netbean, github ]);
 
     return (
         <Fragment>

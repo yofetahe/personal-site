@@ -19,7 +19,7 @@ const BlogFullContent = (props) => {
                 <div className="Blog_content">
 
                     <div className="bottomLine">
-                        <Link id="backLink" to={`/Blogs`}>
+                        <Link id="backLink" to={`/Blogs/${blog.category}`}>
                             &lt;&lt;&nbsp;Back | <span className="headerTitle"> {blog.title} </span>
                         </Link>
                     </div>

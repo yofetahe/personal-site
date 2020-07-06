@@ -1,13 +1,26 @@
-export const blogsContent = [    
-    { 
-        id: "12", 
+export const blogsContent = [
+    {
+        id: "13",
+        icon: "react",
+        category: "React",
+        searchKey: ["React", "framework"],
+        time: "30 min",
+        title: "React Introduction",
+        introduction: `React is a JavaScript library that specializes in helping developers to build user interfaces. React comes with two key features that attract the eyes of JavaScript developers:
+        JSX and Virtual DOM`,
+        full_content: `Full Content comming soon ...`,
+        images: [],
+        create_date: "June 27, 2020"
+    },
+    {
+        id: "12",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
         searchKey: ["cloud foundry", "CFCD", "Cloud", "Basics", "CLI", "Logging", "Targeting", "CF Help", "Orgs and Spaces", "CF curl", "Environment variables"],
-        time: "30 min", 
-        title: "CFCD Exam - Part I: Basics", 
-        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
-        Part I: basics is a preliminary to the CFCD exam that address about CLI, CLI Plugin, Logging, Targeting, CF Help, Orgs & Spaces, CF curl and Environment variables`, 
+        time: "30 min",
+        title: "CFCD Exam - Part I: Basics",
+        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.\n 
+        Part I: basics is a preliminary to the CFCD exam that address about CLI, CLI Plugin, Logging, Targeting, CF Help, Orgs & Spaces, CF curl and Environment variables`,
         full_content: `<p><b>PART I - Basics</b>: is a preliminary to the CFCD exam that address about CLI, CLI Plugin, Logging, Targeting, CF Help, Orgs & Spaces, CF curl and Environment variables</p>
         <p><strong>#</strong><span style="text-decoration: underline;"><strong>CLI</strong></span></p>
         <p>* To configure language for cli<br /> --- cf config --local [ LANG ]<br /> * Login<br /> --- cf login [a API_URL] [-u USERNAME] [-p PASSWORD] [-o ORG] [-s SPACE]<br /> NOTE - API_URL --- api.run.pivotal.io</p>
@@ -106,100 +119,100 @@ export const blogsContent = [
         <li>set-staging-environment-variable-group OR ssevg</li>
         </ul>`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "11", 
+    {
+        id: "11",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
         searchKey: ["cloud foundry", "CFCD", "Application Lifecycle", "Cloud", "Buildpacks", "buildpack sources", "Stacks", "Health checks"],
-        time: "30 min", 
-        title: "CFCD Exam - Part II: Application Lifecycle", 
-        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        time: "30 min",
+        title: "CFCD Exam - Part II: Application Lifecycle",
+        introduction: `<p>Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
         Part II: Application Lifecycle is part of the CFCD exam that address about Buildpacks, buildpack sources, Stacks,
-	    Health checks, and buildpack release notes`, 
+	    Health checks, and buildpack release notes</p>`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "10", 
+    {
+        id: "10",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
-        searchKey: ["cloud foundry", "CFCD", "Cloud", "Application Management", "CF push", "CF start", "CF stop", "CF restart", 
-        "CF restage", "CF delete", "CF app", "horizontal Scaling", "vertical Scaling", "Application manifests"],
-        time: "30 min", 
-        title: "CFCD Exam - Part III: Application Management", 
-        introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Application Management", "CF push", "CF start", "CF stop", "CF restart",
+            "CF restage", "CF delete", "CF app", "horizontal Scaling", "vertical Scaling", "Application manifests"],
+        time: "30 min",
+        title: "CFCD Exam - Part III: Application Management",
+        introduction: `<p>Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
         Part III: Application Management is a part of the CFCD exam that address about CF push, CF start/stop/restart/restage,
-		CF delete, CF app, Scaling (horizontal/vertical), and Application manifests`, 
+		CF delete, CF app, Scaling (horizontal/vertical), and Application manifests</p>`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
-    },    
-    { 
-        id: "9", 
+        create_date: "June 21, 2020"
+    },
+    {
+        id: "9",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
-        searchKey: ["cloud foundry", "CFCD", "Cloud", "Services", "service brokers", "managed services", "service instance lifecycle", "UPSI", 
-        "Sharing service instances", "Space scoped brokers", "VCAP_APPLICATION", "VCAP_SERVICES", "Service keys"],
-        time: "30 min", 
-        title: "CFCD Exam - Part IV: Services", 
+        searchKey: ["cloud foundry", "CFCD", "Cloud", "Services", "service brokers", "managed services", "service instance lifecycle", "UPSI",
+            "Sharing service instances", "Space scoped brokers", "VCAP_APPLICATION", "VCAP_SERVICES", "Service keys"],
+        time: "30 min",
+        title: "CFCD Exam - Part IV: Services",
         introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
         Part IV: Services is a part of the CFCD exam that address about service brokers, managed services, service instance lifecycle & use, UPSI, 
         Sharing service instances, Space scoped brokers, VCAP_APPLICATION, VCAP_SERVICES, and Service keys`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "8", 
+    {
+        id: "8",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
         searchKey: ["cloud foundry", "CFCD", "Cloud", "Routing", "Route management", "interapplication communication"],
-        time: "30 min", 
-        title: "CFCD Exam - Part V: Routing", 
+        time: "30 min",
+        title: "CFCD Exam - Part V: Routing",
         introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
-        Part V: Routing is a part of the CFCD exam that address about Route management and inter-application communication`, 
+        Part V: Routing is a part of the CFCD exam that address about Route management and inter-application communication`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "7", 
+    {
+        id: "7",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
         searchKey: ["cloud foundry", "CFCD", "Cloud", "Platform Security", "Roles and Permissions", "Application security groups"],
-        time: "30 min", 
-        title: "CFCD Exam - Part VI: Platform Security", 
+        time: "30 min",
+        title: "CFCD Exam - Part VI: Platform Security",
         introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
-        Part VI: Platform Security is a part of the CFCD exam that address about Roles & Permissions, and Application security groups`, 
+        Part VI: Platform Security is a part of the CFCD exam that address about Roles & Permissions, and Application security groups`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "6", 
+    {
+        id: "6",
         icon: "cloud_foundry",
         category: "Cloud Foundry",
         searchKey: ["cloud foundry", "CFCD", "Cloud", "Troubleshooting", "CF SSH", "Route confusion", "Out of memory", "CF TRACE", "Troubleshoot SVC connection", "Route collision"],
-        time: "30 min", 
-        title: "CFCD Exam - Part VII: Troubleshooting", 
+        time: "30 min",
+        title: "CFCD Exam - Part VII: Troubleshooting",
         introduction: `Cloud Foundry Certified Developer (CFCD) is a professional cloud native developer certification.<br/> 
-        Part VII: Troubleshooting is CFCD exam last part that address about CF SSH, Route confusion, Out of memory, CF TRACE, Troubleshoot SVC connection, and Route collision`, 
+        Part VII: Troubleshooting is CFCD exam last part that address about CF SSH, Route confusion, Out of memory, CF TRACE, Troubleshoot SVC connection, and Route collision`,
         full_content: `Full Content comming soon ...`,
         images: [],
-        create_date: "June 21, 2020" 
+        create_date: "June 21, 2020"
     },
-    { 
-        id: "5", 
+    {
+        id: "5",
         icon: "typescript",
         category: "TypeScript",
         searchKey: ["typescript"],
-        time: "45 min", 
-        title: "TypeScript", 
+        time: "45 min",
+        title: "TypeScript Basics",
         introduction: `TypeScript is a strongly typed superset of JavaScript, which means it adds some syntactical benefits 
-        to the language and still it allows to write normal JavaScript.`, 
+        to the language and still it allows to write normal JavaScript.`,
         full_content: `<p>TypeScript is a strongly-typed superset of JavaScript, which means it adds some syntactical benefits 
         to the language and still it allows to write normal JavaScript. It encourages a more declarative 
         style of programming through things like interfaces and static typing (more on these later), offers modules and classes, 
@@ -207,33 +220,87 @@ export const blogsContent = [
         a strongly static layer over current JavaScript that has a few features to make life (and debugging especially) a bit 
         more bearable.</p><p>Full content coming soon ...</p>`,
         images: [],
-        create_date: "June 17, 2020" 
+        create_date: "June 17, 2020"
     },
-    { 
-        id: "4", 
+    {
+        id: "4",
         icon: "nodejs",
         category: "Node.js",
-        searchKey: ["node", "nodejs"],
-        time: "30 min", 
-        title: "Node.js", 
+        searchKey: ["node", "nodejs", "node.js"],
+        time: "30 min",
+        title: "Node.js Introduction",
         introduction: `Node.js is an open source and cross-platform runtime environment for executing 
         JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and it’s not a programming language. 
-        Most of the people are confused and understand it’s a framework or a programming language.`, 
-        full_content: `<p>Node.js is an open source and cross-platform runtime environment for executing 
-        JavaScript code outside of a browser. You need to remember that NodeJS is not a framework and it’s not a programming language. 
-        Most of the people are confused and understand it’s a framework or a programming language.</p><p>Full content coming soon ...</p>`,
+        Most of the people are confused and understand it’s a framework or a programming language.`,
+        full_content: `<p># <strong>What?</strong><br />- js runtime (server environment) (not a language or a framework)<br />- build on the V8 JS engine (same as google)<br />- it allows to run JS on the server<br />- can generate dynamic pages content, create open read write delete &amp; close files on server, &amp; CRUD operations</p>
+        <p># <strong>Why?</strong><br />- fast, effecient and highly scalable<br />- event driven, non-blocking, asynchronously programming<br />- popular in the industry<br />- same language on the front and back end</p>
+        <p># <strong>Non-blocking?</strong><br />- works on a single thread using non-blocking I/O calls<br />- Supports tens of thousands concurrent connections<br />- Optimizes throughput and scalablity in apps with many I/O operation<br />- All of this makes Node.js apps very fast &amp; efficient</p>
+        <p># <strong>How it works?</strong><br />- EventEmitters --- Events &amp; event loop --- event handler</p>
+        <p># <strong>Best type of projects for node</strong><br />- Anything that is not CPU intensive &amp; huge calculations<br />- Rest API &amp; Microservices<br />- Real time services(chat, Live updates)<br />- CRUD Apps - Blogs, shopping carts, social networks<br />- Tools and Utilities</p>
+        <p># <strong>NPM (Node Pcakage Manager)</strong><br />- used to install 3rd party package<br />- used to created to run certain tasks such as run a server<br /> npm init, npm intall [package-name]</p>
+        <p># <strong>Node Modules</strong><br />- can be considered as libraries or set of functionality<br />- Node core modules (path, fs, http, ...)<br />- 3rd part modules intalled via NPM<br />- Custom modules (files) --&gt; to use a file in the project<br />&nbsp; &nbsp; &nbsp;const path = require('path');</p>
+        <p># <strong>What is the need of package.json</strong><br />- its main purpose is to hold all dependencies required for the project</p>
+        <ul>
+        <li>npm install uuid ---&gt; project dependencies</li>
+        </ul>
+        <p>- dev-depedencies - dependencies required for development</p>
+        <ul>
+        <li>npm install --save-dev (-D) nodemon</li>
+        </ul>
+        <p># <strong>How to run JS file?</strong><br />node [name of the js file name]</p>
+        <p># <strong>Module Wrapper</strong><br />- a default function generated by Node to include or hold our pages content</p>
+        <p>(function(exports, require, module, __filename, __dirname){</p>
+        <p>})</p>
+        <p># <strong>How to use node?</strong><br />Example<br />- person.js file<br />class Person {<br />&nbsp; &nbsp; constructor(name, age){<br />&nbsp; &nbsp; &nbsp; &nbsp; this.name = name;<br />&nbsp; &nbsp; &nbsp; &nbsp; this.age = age;<br />&nbsp; &nbsp; }<br />&nbsp; &nbsp; greetings(){<br />&nbsp; &nbsp; &nbsp; &nbsp; console.log('My name is \${this.name} and I am \${this.age}');<br />&nbsp; &nbsp; }<br />}<br />module.exports = Person;</p>
+        <p>- index.js file<br />const Person = require('./person');</p>
+        <p>const person1 = new Person('James', 20);</p>
+        <p>person1.greetings();</p>
+        <p># <strong>What are the core modules?</strong><br />
+        - <b>Path Module</b> <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const path = require('path');<br />&nbsp; &nbsp; &nbsp; &nbsp; - methods - basename, dirname, extname, parse, concatenate<br />&nbsp; &nbsp; &nbsp; &nbsp; * path.basename(__filename); --&gt; gives only file anme<br />&nbsp; &nbsp; &nbsp; &nbsp; * path.parse(__filename); --&gt; return path object<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{ root: '...', dir: '...', base: '...', ext: '...', name: '...' }<br />&nbsp; &nbsp; &nbsp; &nbsp; * path.join(__dirname, 'test', 'hello.html');</p>
+        <p>- <b>File System (fs) Module</b> <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const fs = require(fs);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;const path = require('path');</p>
+        <p style="padding-left: 30px;">// Create folder<br /> fs.mkdir(path.join(__dirname, './test'), {}, err =&gt; {<br />&nbsp; &nbsp; &nbsp; if(err) throw err;<br />&nbsp; &nbsp; &nbsp; console.log('folder created');<br /> });</p>
+        <p style="padding-left: 30px;">// Create and write to file<br /> fs.writeFile(<br />&nbsp; &nbsp;path.join(__dirname, './test', 'hello.txt'), <br />&nbsp; &nbsp;'Hello world', <br />&nbsp; &nbsp;err =&gt; {<br />&nbsp; &nbsp; &nbsp; if(err) throw err;<br />&nbsp; &nbsp; &nbsp; console.log('folder created');<br /> });</p>
+        <p style="padding-left: 30px;">// Append files<br /> fs.writeFile(<br />&nbsp; &nbsp;path.join(__dirname, './test', 'hello.txt'), <br />&nbsp; &nbsp;'Hello world', <br />&nbsp; &nbsp;err =&gt; {<br />&nbsp; &nbsp; &nbsp; if(err) throw err;<br />&nbsp; &nbsp; &nbsp; console.log('folder created');</p>
+        <p style="padding-left: 30px;">&nbsp; &nbsp; &nbsp; fs.appendFile(<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;path.join(__dirname, './test', 'hello.txt'), <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'Append file', <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;err =&gt; {<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if(err) throw err;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log('folder created');<br />&nbsp; &nbsp; &nbsp; &nbsp;});<br /> });</p>
+        <p style="padding-left: 30px;">// Read file<br /> fs.readFile(<br />&nbsp; &nbsp;path.join(__dirname, '/test', 'hello.txt'),<br />&nbsp; &nbsp;'utf8', // without this it will gives a raw buffer, not the actual data<br />&nbsp; &nbsp;(err, data) =&gt; {<br />&nbsp; &nbsp; &nbsp; &nbsp; if(err) throw err;<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;console.log(data);<br /> });</p>
+        <p style="padding-left: 30px;">// Rename file<br /> fs.rename(<br />&nbsp; &nbsp; path.join(__dirname, '/test', 'hello.txt'),<br />&nbsp; &nbsp; path.join(__dirname, '/test', 'helloworld.txt'),<br />&nbsp; &nbsp; err =&gt; {<br />&nbsp; &nbsp; &nbsp; &nbsp;if(err) throw err;<br />&nbsp; &nbsp; &nbsp; &nbsp;console.log('File renamed ...');<br /> });</p>
+        <p>- <b>OS Module</b> <br /> const os = require('os');<br /> // platform - os.platform()<br /> // CPU Arch - os.arch()<br /> // CPU Core Info - os.cpus()<br /> // Free memory - os.freemem()<br /> // Total memory - os.totalmem()<br /> // Home directory - os.homedir()</p>
+        <p>- <b>URL Module</b> <br /> const url = require('url');<br /> const myUrl = new URL('http://mywebsite.com/hello.html?id=100&amp;status=active');<br /> // Serialized URL - myUrl.href<br /> // Host (root domain) - myUrl.host // include port<br /> // Hostname - myUrl.hostname<br /> // Pathname - myUrl.pathname<br /> // Serialized query - myUrl.search // every thing after ?<br /> // Params Object - myUrl.searchParams // parameters as an object<br /> // myUrl.searchParams.append('key', 'value') // append to url parameters<br /> // myUrl.searchParams.forEach((value, name) =&gt; console.log('\${name}: \${value}'));</p>
+        <p>- <b>Event Module</b> <br /> const EventEmitter = require('events');</p>
+        <p>class MyEmitter extends EventEmitter { }</p>
+        <p>const myEmitter = new MyEmitter();</p>
+        <p>myEmitter.on('event', () =&gt; console.log('Event fired!'));</p>
+        <p>myEmitter.emit('event'); // when this is called then the previous line of code emitted</p>
+        <p><br /> Example</p>
+        <p>* logger.js file</p>
+        <p>const EventEmitter = require('events');<br /> const uuid = require('uuid');</p>
+        <p>class Logger extends EventEmitter {<br /> log(msg) {<br /> this.emit('message', { id: uuid.v4(), msg });<br /> }<br /> }</p>
+        <p>module.export = Logger</p>
+        <p>* index.js</p>
+        <p>const Logger = require('./logger');</p>
+        <p>const logger = new Logger();</p>
+        <p>logger.on('message', data =&gt; console.log('Called Listener', data));</p>
+        <p>loger.log('hello world');</p>
+        <p>- <b>HTTP Module</b> <br /> # Simpliest example<br /> const http = require('http');<br /> http.createServer((req, res) =&gt; {<br /> res.write('Hello world');<br /> res.end();<br /> }).listen(5000, () =&gt; console.log('Server running ...'));</p>
+        <p>&nbsp;</p>
+        <p># Example 2<br /> const http = require('http');<br /> const path = require('path');<br /> const fs = require('fs');</p>
+        <p>const server = http.createServer((req, res) =&gt; {</p>
+        <p>// Ineffecient way<br /> if(req.url === '/') {<br /> fs.readFile(<br /> path.join(__dirname, 'public', 'index.html'),<br /> (err, content) =&gt; {<br /> res.writeHead(200, {'Content-Type': 'text/html' });<br /> res.end(content);<br /> });<br /> <br /> }<br /> if(req.url === '/api/users') {<br /> const users = [<br /> {name: 'John', age: 30},<br /> {name: 'Eric', age: 20}<br /> ];<br /> res.writeHead(200, {'Content-Type': 'text/html' });<br /> res.end(JSON.stringify(users));<br /> }</p>
+        <p>// Efficent way<br /> ???<br /> <br /> });</p>
+        <p>const PORT = process.env.PORT || 5000;</p>
+        <p>server.listen(PORT, () =&gt; console.log('Server running on port \${PORT}'));</p>`,
         images: [],
-        create_date: "June 17, 2020" 
+        create_date: "June 17, 2020"
     },
-    { 
-        id: "3", 
+    {
+        id: "3",
         icon: "java",
         category: "Java",
         searchKey: ["java"],
-        title: "Java Core",
-        time: "50 min", 
+        title: "Java Core Basics",
+        time: "50 min",
         introduction: `Java is among the most popular programming languages out there, mainly because of how versatile and compatible it is. Java can be used for different purpose such as developing Mobile applications (specially Android apps),
-        Desktop applications, Web applications, Web servers and application servers, Games, Database connection, and many more.`, 
+        Desktop applications, Web applications, Web servers and application servers, Games, Database connection, and many more.`,
         full_content: `<p>Java is among the most popular programming languages out there, mainly because of how versatile and compatible it is. Java can be used for different purpose such as developing Mobile applications (specially Android apps),
         Desktop applications, Web applications, Web servers and application servers, Games, Database connection, and many more.
         As of 2019, 88% market share of all smartphones run on Android, the mobile operating system written in Java. Knowing Java opens a great deal of doors for you as a developer. 
@@ -241,16 +308,16 @@ export const blogsContent = [
         It is one of the most popular programming language in the world, easy to learn and simple to use, open-source and free, secure, fast and powerful, and has a huge community support</p>
         <p></p>Full content coming soon ...</p>`,
         images: [],
-        create_date: "June 16, 2020" 
+        create_date: "June 16, 2020"
     },
-    { 
-        id: "2", 
+    {
+        id: "2",
         icon: "python",
         category: "Python",
         searchKey: ["python"],
-        time: "45 min", 
-        title: "Python with Examples", 
-        introduction: "Python has syntax that allows developers to write programs with fewer lines than some other programming languages and it has a simple syntax similar to the English language. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This content showed you introduction to the basic syntax with example.", 
+        time: "45 min",
+        title: "Python Basics with Examples",
+        introduction: "Python has syntax that allows developers to write programs with fewer lines than some other programming languages and it has a simple syntax similar to the English language. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This content showed you introduction to the basic syntax with example.",
         full_content: `<p>Python has syntax that allows developers to write programs with fewer lines than some other programming languages and it has a simple syntax similar to the English language. Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This content showed you introduction to the basic syntax with example.</p>
         <div>1. <strong>Number</strong> -- Addition, Subtraction, Multiplication, Division, Module(remainder), Exponent(**)</div>
         <div>2. <strong>Variable</strong> -- x = 10, g = input("Enter Number: ")//to request a user to enter the number</div>
@@ -699,21 +766,21 @@ export const blogsContent = [
         <div style="padding-left: 30px;">fob = open('c:/test/a.txt', 'w')</div>
         <div style="padding-left: 30px;">fob.writelines(listme)</div>
         <div style="padding-left: 30px;">fob.close()</div>
-        <div>******</div>`, 
+        <div>******</div>`,
         images: [],
-        create_date: "June 16, 2020" 
+        create_date: "June 16, 2020"
     },
-    { 
-        id: "1", 
+    {
+        id: "1",
         icon: "STS",
         category: "Spring",
-        searchKey: ["spring", "framework", "spring framework"], 
-        title: "Spring Framework",
+        searchKey: ["spring", "framework", "spring framework"],
+        title: "Spring Framework (Introduction)",
         time: "20 min",
         introduction: `Spring is the most popular application development framework for Java technology. 
         And it is an open source and lightweight Java platform. Large number of developers around the world
         use Spring Framework to create high performing, easily testable, and reusable code.
-        Spring makes Java productive, reactive, cloud ready, simple, and modern.`, 
+        Spring makes Java productive, reactive, cloud ready, simple, and modern.`,
         full_content: `<h3>Spring Framework - Overview</h3>
         <p>Spring is the most popular application development framework for Java technology.
         And it is an open source and lightweight Java platform. Large number of developers around the world
@@ -736,6 +803,6 @@ export const blogsContent = [
         HelloWorld obj = (HelloWorld) context.getBean("helloWorld"); <br/>
         obj.getMessage();</pre></div></li></ul>`,
         images: [],
-        create_date: "June 14, 2020" 
+        create_date: "June 14, 2020"
     }
 ];

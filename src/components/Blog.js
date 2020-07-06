@@ -5,24 +5,22 @@ import './blog.css';
 
 const Blog = (props) => {
     return (
-        <div className="Blog_Content">
-            <div className="BlogImage">
-                <img id="blogIcon" src={'/images/TechIcons/' + props.blog.icon + '.png'} alt={props.blog.icon} />
-            </div>
+        <div className="Blog_Content">            
             <div className="Blog">
-                <div id="title">
-                    <img id="blogSmallIcon" src={'/images/TechIcons/' + props.blog.icon + '.png'} alt={props.blog.icon} />
+                <div id="title">                    
                     <span id="titleContent">{props.blog.title}</span>
                 </div>
-                <p id="introduction"> {props.blog.introduction}
+                <p id="introduction"> {props.blog.introduction}</p>
+
+                <p id="date">
                     <Link id="readmore" to={{
                         pathname: `/BlogContent/${props.blog.id}`,
                         selectedBlog: { blog: props.blog }
                     }}>
-                        ...read more
+                        Read more...
                     </Link>
+                    <span style={{float: "right"}}> {props.blog.create_date} | <i>{props.blog.time} read</i> </span>
                 </p>
-                <p id="date"> {props.blog.create_date} | <i>{props.blog.time} read</i> </p>
             </div>
         </div>
     );

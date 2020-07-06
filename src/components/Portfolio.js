@@ -8,7 +8,7 @@ import './portfolio.css';
 
 const Portfolio = () => {
 
-    const [works, setWorks] = useState([
+    const [works] = useState([
         {
             id: "1",
             image: "SMS",

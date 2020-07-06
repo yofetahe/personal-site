@@ -12,6 +12,7 @@ import Technologies from './components/Technologies';
 import ContactMe from './components/ContactMe';
 import Resume from './components/Resume';
 import Blogs from './components/Blogs';
+import BlogsByTech from './components/blogsByTech';
 import BlogContent from './components/BlogFullContent';
 import PageNotFound from './components/PageNotFound';
 
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/ContactMe" component={ContactMe} />
           <Route exact path="/Resume" component={Resume} />
           <Route exact path="/Blogs" component={Blogs} />
+          <Route exact path="/Blogs/:tech" component={BlogsByTech} />
           <Route exact path="/BlogContent/:id" component={BlogContent} />
           <Route component={PageNotFound} />
         </Switch>      

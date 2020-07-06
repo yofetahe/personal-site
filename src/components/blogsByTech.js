@@ -1,30 +1,33 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Blog from './Blog';
-import BlogTech from './blogTech';
+// import BlogTech from './blogTech';
 
 import PageTitle from './PageTitle';
 import RedirectPage from './RedirectPage';
 import { blogsContent } from './data/blogsList';
-import { blogsTechCategory } from './data/blogsTechCategory';
+// import { blogsTechCategory } from './data/blogsTechCategory';
 
 import './blogs.css';
 import SearchIcon from '../images/search_icon.png';
 
-const Blogs = () => {
+const BlogsByTech = (props) => {
 
     const [blogs, setBlogs] = useState(blogsContent);
-    const [blogsTech] = useState(blogsTechCategory);
     const [searchFlag, setSearchFlag] = useState(false);
-    let techList = [];
+    // let techList = [];
+
+    useEffect(() => {
+        setBlogs(blogs.filter(blog => blog.category === props.match.params.tech));
+    }, [props.match.params.tech]);
 
     function handleSearch() {
+        setSearchFlag(false);
         var searchWord = document.getElementById('searchInput').value;
         if (searchWord === '') {
-            setSearchFlag(false);
             setBlogs(blogsContent);
         } else {
-            setSearchFlag(true);
             const searchBlogContent = blogsContent.filter(blog => blog.searchKey.some(key => searchWord.toLowerCase() === key.toLowerCase()));
             setBlogs(searchBlogContent);
         }
@@ -41,7 +44,7 @@ const Blogs = () => {
         <RedirectPage />
         <div id="homePageContent"
             className="PageContent" >
-            <div className="BackgroundText" > Blogs </div>
+            <div className="BackgroundText"> Blogs </div>
             <PageTitle pageTitle="TECHNOLOGIES I'M INTERESTED IN " />
             <div className="Blogs_List" >
 
@@ -63,13 +66,15 @@ const Blogs = () => {
                     })}
                     {techList.length === 0 && <span className="technologyTag" onClick={handleSearch}> Get All List </span>}
                 </div> */}
-                
-                {!searchFlag && blogsTech.map(tech => {
-                    return <BlogTech key={tech.id} tech={tech} />
-                })}
 
-                {searchFlag && blogs.map(blog => {
-                    return <Blog key={blog.id} blog={blog} />;
+                <div className="bottomLine">
+                    <Link id="backLink" to={`/Blogs`}>
+                        &lt;&lt;&nbsp;Back | <span className="headerTitle"> {props.match.params.tech} </span>
+                    </Link>
+                </div>
+
+                {blogs.map(blog => {
+                    return <Blog blog={blog} />;
                 })}
             </div>
         </div>
@@ -77,4 +82,4 @@ const Blogs = () => {
     );
 }
 
-export default Blogs;
+export default BlogsByTech;

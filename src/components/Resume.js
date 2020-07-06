@@ -14,7 +14,7 @@ import Resume_WORD from '../document/Yofetahe_Habtu_Resume.docx';
 
 const Resume = () => {
 
-    const [experiance, setExperiance] = useState(experienceList);
+    const [experiance] = useState(experienceList);
 
     return (
         <Fragment>
