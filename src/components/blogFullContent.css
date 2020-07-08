@@ -30,22 +30,7 @@
         margin-bottom: 200px;
         text-align: justify;
         line-height: 30px;
-    }
-
-    .didrde-code { 
-		background: #ffffff; 
-		overflow:auto;
-		width:auto;
-		border:solid gray;
-        border-width:.1em .1em .1em .8em;
-        padding:.2em .6em;
-        color: gray;
-    }
-
-	.didrde-code pre {
-		margin: 0; 
-		line-height: 125%
-    }    
+    }        
 }
 
 .bottomLine {
@@ -66,4 +51,19 @@
 .fullContent {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.didrde-code { 
+    background: #ffffff; 
+    overflow: scroll;
+    width: auto;
+    border: solid gray;
+    border-width:.1em .1em .1em .8em;
+    padding:.2em .2em;
+    color: gray;
+}
+
+.didrde-code pre {
+    margin: 0; 
+    line-height: 125%
 }
